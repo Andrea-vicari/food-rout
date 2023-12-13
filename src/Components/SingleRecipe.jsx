@@ -1,83 +1,45 @@
 import React from "react";
-import { useEffect, useState} from 'react';
 import { BreadCumb } from "./BreadCumb";
 import { Link } from "react-router-dom";
-import place from "./placeholder.jpg";
+import { RandomRecipe, randomCloneExport } from "./Random";
 
-  var currentURL = window.location.search;
-
-  console.log(currentURL); // ?52XXX
-
-  var splittedURL = currentURL.split('');
-  console.log(splittedURL);
-  splittedURL.shift();
-  console.log(splittedURL);
-  var trimmedURL = splittedURL.join('');
-  console.log(trimmedURL);
-
-  // Address to fetch data random.php data
-  var API_URL = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i='.concat(trimmedURL);
-
-  var responseRandom;
-  var randomJSON;
-  var singleTitle;
-  var singleCategory;
-  var singleArea;
+const SingleRecipe = () => {
 
 
-  async function getDatafromTheAPI(){
-    try{
-        responseRandom = await fetch(API_URL);
-        randomJSON = await responseRandom.json();
-        console.log(randomJSON)
-        singleTitle = randomJSON.meals[0].strMeal;
-        singleCategory = randomJSON.meals[0].strCategory;
-        singleArea = randomJSON.meals[0].strArea;
-
-        getRecipe(singleTitle);
-
-    }
-    catch(e){
-        alert(`Error: ${e}`);
-      }
-  }
-  getDatafromTheAPI();
-
-
-const SingleRecipe = (cazzo) => {
-    console.log(cazzo)
     return (
+
+
     <React.Fragment>
       <BreadCumb />
 
       <div className="container col-xxl-8 px-4">
     <div className="row flex-lg-row align-items-center g-5 py-5">
       <div className="col-10 col-sm-8 col-lg-6">
-        <img src={place} className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy"/>
+        <img src={randomCloneExport.meals[0].strMealThumb} className="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy"/>
       </div>
       <div className="col-lg-6">
       <div className="card mb-4 rounded-3 shadow-sm">
           <div className="card-header py-3">
-            <h4 className="my-0 fw-normal display-6">{singleTitle}</h4>
+            <h3 className="my-0 fw-normal">{randomCloneExport.meals[0].strMeal}</h3>
           </div>
           <div className="card-body">
             <ul className="list-unstyled">
               <li>
               <Link className="icon-link text-decoration-none fs-4 text-dark" to="/CategoriesPage">
                 <i className="fa fa-globe fs-4 text-warning display-1"></i>
-                Country
+                {randomCloneExport.meals[0].strArea}
               </Link>
 
               </li>
               <li>
                 <Link className="icon-link text-decoration-none fs-4 text-dark" to="/CategoriesPage">
                   <i className="fa fa-lemon fs-4 text-warning display-1"></i>
-                  Category
+                  {randomCloneExport.meals[0].strCategory}
                 </Link>
 
               </li>
               <li>
-              <Link className="icon-link text-decoration-none fs-4 text-dark" to="/CategoriesPage">
+              <Link className="icon-link text-decoration-none fs-4 text-dark" to={randomCloneExport.meals[0].strYoutube} target="_blank">
                 <i className="fab fa-youtube fs-4 text-danger display-1"></i>
                 Video
               </Link>

@@ -4,6 +4,7 @@ const RandomRecipeURL = 'https://www.themealdb.com/api/json/v1/1/random.php';
 
 var responseRandom;
 var randomJSON;
+var randomCloneExport;
 
 var randomThumb;
 var randomTitle;
@@ -27,6 +28,10 @@ getDatafromTheAPI();
 
 const RandomRecipe = () => {
     console.log(randomJSON);
+
+    randomCloneExport = {...randomJSON}
+
+    console.log(randomCloneExport)
 
     for(let prop in randomJSON){
         randomTitle = randomJSON[prop][0].strMeal;
@@ -66,7 +71,7 @@ const RandomRecipe = () => {
             <div className="col-lg-6 mx-auto">
             <p className="lead mb-4">{trimmedDirections}...</p>
 
-                <Link type="button" className="btn btn-outline-dark btn-lg px-4 gap-3" to={`/SingleRecipe?${randomID}`}>
+                <Link type="button" className="btn btn-outline-dark btn-lg px-4 gap-3" to={`/SingleRecipe?${randomTitle}`}>
                     <i className='fa fa-smile m-2'></i>
                     Enjoy the recipe</Link>
             </div>
@@ -76,4 +81,6 @@ const RandomRecipe = () => {
 
     )
 }
-export {RandomRecipe};
+
+
+export {RandomRecipe,randomCloneExport};
