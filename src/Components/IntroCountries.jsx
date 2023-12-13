@@ -177,7 +177,7 @@ const IntroCountries = () => {
             <h4>{d.strArea}</h4>
             <p>{d.shorteDesc} ...</p>
             <p>
-            <Link to="/SingleRecipe" className="text-danger text-decoration-none icon-link gap-1 icon-link-hover stretched-link">
+            <Link to="/SingleRecipe" className="text-danger text-decoration-none icon-link gap-1 icon-link-hover">
           Read all
           <i className='fa fa-arrow-right'></i>
         </Link>

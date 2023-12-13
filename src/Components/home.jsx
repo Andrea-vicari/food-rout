@@ -19,7 +19,7 @@ function Home() {
           <IntroCat />
         </div>
         <RandomRecipe />
-
+      <div className="container-fluid bg-body-secondary">
       <div className="col-md-8 mx-auto text-center py-lg-2">
         <h1 className="text-center title py-2">Countries</h1>
         <div className="separator"></div>
@@ -28,6 +28,7 @@ function Home() {
 
         <div id="countries" className="container mx-auto row g-3 pb-lg-5 row-cols-1 row-cols-lg-6">
           <IntroCountries />
+        </div>
         </div>
 
 
