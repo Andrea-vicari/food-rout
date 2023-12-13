@@ -1,8 +1,13 @@
 import React from "react";
 import { BreadCumb } from "./BreadCumb";
 import { Link } from "react-router-dom";
-import place from "./placeholder.jpg"
+import place from "./placeholder.jpg";
+
 const SingleRecipe = () => {
+
+
+  //console.log(data)
+
     return (
     <React.Fragment>
       <BreadCumb />
@@ -15,29 +20,57 @@ const SingleRecipe = () => {
       <div className="col-lg-6">
       <div className="card mb-4 rounded-3 shadow-sm">
           <div className="card-header py-3">
-            <h4 className="my-0 fw-normal display-5">Shawarma</h4>
+            <h4 className="my-0 fw-normal display-6">Shawarma</h4>
           </div>
           <div className="card-body">
-
-            <ul className="list-unstyled mt-3 mb-4">
-              <li className="mb-3">
-              <Link class="icon-link text-decoration-none fs-3 text-dark" to="/CategoriesPage">
-                <i className="fa fa-globe fs-1 text-warning display-1"></i>
-                Moroccan
+            <ul className="list-unstyled">
+              <li>
+              <Link className="icon-link text-decoration-none fs-4 text-dark" to="/CategoriesPage">
+                <i className="fa fa-globe fs-4 text-warning display-1"></i>
+                Country
               </Link>
 
               </li>
-              <li className="mb-3">
-              <Link class="icon-link text-decoration-none fs-3 text-dark" to="/CategoriesPage">
-                <i className="fa fa-globe fs-1 text-warning display-1"></i>
-                Moroccan
-              </Link>
+              <li>
+                <Link className="icon-link text-decoration-none fs-4 text-dark" to="/CategoriesPage">
+                  <i className="fa fa-lemon fs-4 text-warning display-1"></i>
+                  Category
+                </Link>
 
               </li>
+              <li>
+              <Link className="icon-link text-decoration-none fs-4 text-dark" to="/CategoriesPage">
+                <i className="fab fa-youtube fs-4 text-danger display-1"></i>
+                Video
+              </Link>
 
+
+              </li>
             </ul>
-            <button type="button" className="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
+                <h3 className="my-3 fw-normal">Ingredients</h3>
+                <ul className="list-group">
+                    <li className="list-group-item">Cras justo odio</li>
+                    <li className="list-group-item">Dapibus ac facilisis in</li>
+                    <li className="list-group-item">Morbi leo risus</li>
+                    <li className="list-group-item">Porta ac consectetur ac</li>
+                    <li className="list-group-item">Vestibulum at eros</li>
+                </ul>
+                <i></i>
           </div>
+          <div className="card-header py-3">
+          <div className="container">
+            <p className="my-0 fs-5">Add to Favorites</p>
+            <i className="fs-2 fa fa-heart"></i>
+
+          </div>
+          <div className="container">
+            <p className="my-0 fs-5">Share</p>
+            <i className="fs-2 fab fa-instagram"></i>
+            <i className="fs-2 fab fa-facebook mx-3"></i>
+          </div>
+
+          </div>
+
         </div>
       </div>
     </div>
