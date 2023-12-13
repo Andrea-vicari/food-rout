@@ -7,6 +7,7 @@ var randomJSON;
 
 var randomThumb;
 var randomTitle;
+var randomID;
 var randomDirections;
 var directionsArray;
 var trimmedDirections;
@@ -29,6 +30,7 @@ const RandomRecipe = () => {
 
     for(let prop in randomJSON){
         randomTitle = randomJSON[prop][0].strMeal;
+        randomID = randomJSON[prop][0].idMeal;
         randomThumb = randomJSON[prop][0].strMealThumb;
         randomDirections = randomJSON[prop][0].strInstructions;
         directionsArray = randomDirections.split(' ');
@@ -64,7 +66,7 @@ const RandomRecipe = () => {
             <div className="col-lg-6 mx-auto">
             <p className="lead mb-4">{trimmedDirections}...</p>
 
-                <Link type="button" className="btn btn-outline-dark btn-lg px-4 gap-3" to={`/SingleRecipe?${randomTitle}`}>
+                <Link type="button" className="btn btn-outline-dark btn-lg px-4 gap-3" to={`/SingleRecipe?${randomID}`}>
                     <i className='fa fa-smile m-2'></i>
                     Enjoy the recipe</Link>
             </div>
