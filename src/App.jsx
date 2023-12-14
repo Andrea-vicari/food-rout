@@ -6,7 +6,7 @@ import CategoriesPage from './Components/CategoriesPage';
 import CountriesPage from './Components/CountriesPage';
 import IngredientsPage from './Components/IngredientsPage';
 import LoginPage from './Components/LoginPage';
-import {SingleRecipe} from './Components/SingleRecipe';
+import {SingleRandom} from './Components/SingleRandom';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
         <Route path="/Countries" element={<CountriesPage />} />
         <Route path="/Ingredients" element={<IngredientsPage />} />
         <Route path="/Login" element={<LoginPage />} />
-        <Route path="/SingleRecipe" element={<SingleRecipe />} />
+        <Route path="/SingleRandom" element={<SingleRandom />} />
       </Routes>
 
      <Footer />
