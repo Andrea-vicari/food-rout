@@ -6,7 +6,7 @@ import CategoriesPage from './Components/CategoriesPage';
 import CountriesPage from './Components/CountriesPage';
 import IngredientsPage from './Components/IngredientsPage';
 import LoginPage from './Components/LoginPage';
-import SingleRecipe from './Components/SingleRecipe';
+import {SingleRecipe} from './Components/SingleRecipe';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
