@@ -2,34 +2,20 @@ import React from "react";
 import { BreadCumb } from "./BreadCumb";
 import { useEffect, useState} from 'react';
 import place from "../Components/placeholder.jpg"
+import { json } from "react-router-dom";
 
 let currentURL = window.location.search;
 
 console.log(currentURL); // ?52XXX
 let splittedURL = currentURL.split(''); // ?,C,h,i,c,k,e,n
 splittedURL.shift(); // C,h,i,c,k,e,n
-const trimmedURL = splittedURL.join(''); // Chicken
+var trimmedURL = splittedURL.join(''); // Chicken
 
-
-
-var responseCAT;
-var catJSON;
 var SINGLE_CAT_URL = 'https://www.themealdb.com/api/json/v1/1/filter.php?c='.concat(trimmedURL);
 
-async function getDatafromTheAPI(){
-  try{
-      responseCAT = await fetch(SINGLE_CAT_URL);
-      catJSON = await responseCAT.json;
-
-  }
-  catch(e){
-      alert(`Error: ${e}`);
-    }
-}
-
-getDatafromTheAPI();
-
+var cloneArra;
 const SingleCategory = () => {
+
 
   const [advice, setAdvice] = useState([]);
 
@@ -41,7 +27,10 @@ const SingleCategory = () => {
               const response = await fetch(url);
               const json = await response.json();
               console.log(json);
+              cloneArra = {...json} ;
+              console.log(cloneArra);
               setAdvice(advice.meals);
+
           } catch (error) {
               console.log("error", error);
           }
@@ -86,6 +75,7 @@ const SingleCategory = () => {
     </React.Fragment>
 
     )
+
 };
 
 export {SingleCategory};
