@@ -1,9 +1,7 @@
 import React from "react";
 import { BreadCumb } from "./BreadCumb";
-import place from "../Components/placeholder.jpg"
-import { Link } from "react-router-dom";
-
 import { useEffect, useState} from 'react';
+import place from "../Components/placeholder.jpg"
 
 let currentURL = window.location.search;
 
@@ -14,13 +12,26 @@ const trimmedURL = splittedURL.join(''); // Chicken
 
 
 
+var responseCAT;
+var catJSON;
 var SINGLE_CAT_URL = 'https://www.themealdb.com/api/json/v1/1/filter.php?c='.concat(trimmedURL);
 
-console.log(SINGLE_CAT_URL)
+async function getDatafromTheAPI(){
+  try{
+      responseCAT = await fetch(SINGLE_CAT_URL);
+      catJSON = await responseCAT.json;
+
+  }
+  catch(e){
+      alert(`Error: ${e}`);
+    }
+}
+
+getDatafromTheAPI();
 
 const SingleCategory = () => {
 
-  const [advice, setAdvice] = useState("");
+  const [advice, setAdvice] = useState([]);
 
   useEffect(() => {
       const url = SINGLE_CAT_URL;
@@ -30,7 +41,7 @@ const SingleCategory = () => {
               const response = await fetch(url);
               const json = await response.json();
               console.log(json);
-              setAdvice(advice);
+              setAdvice(advice.meals);
           } catch (error) {
               console.log("error", error);
           }
@@ -45,21 +56,30 @@ const SingleCategory = () => {
       <BreadCumb />
 
       <div className="container">
-      <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
-  <div className="col-10 col-sm-8 col-lg-6">
-    <img src={place} className="d-block mx-lg-auto img-fluid" alt=".." width="700" loading="lazy"/>
-  </div>
-  <div className="col-lg-6">
-    <h1 className="display-5 fw-bold text-body-emphasis lh-1 mb-3">Category title</h1>
-    <p className="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-    <p className="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-    <p className="lead">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
-    <div className="d-grid gap-2 d-md-flex justify-content-md-start">
-      <button type="button" className="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
-      <button type="button" className="btn btn-outline-secondary btn-lg px-4">Default</button>
-    </div>
-  </div>
-</div>
+      <div className="container mx-auto">
+            <div className="col-md-10 mx-auto text-center py-lg-2">
+            <h1 className="text-center title py-2">{trimmedURL}</h1>
+            <div className="separator"></div>
+            <p className="text-center">Our category section is filled with a variety of mouth-watering dishes that are sure to satisfy your cravings. From hearty main courses to sweet and satisfying desserts, we have something for everyone. So, take a look around and see what catches your eye</p>
+            </div>
+        </div>
+
+        <div className="col-sm-4">
+            <div className="card mb-3" width='540'>
+              <div className="row g-0">
+                <div className="col-md-4">
+                  <img src={place} className="img-fluid rounded-start" alt="..."/>
+                </div>
+                <div className="col-md-8">
+                  <div className="card-body">
+                    <h5 className="card-title">Card title</h5>
+                    <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p className="card-text"><small className="text-body-secondary">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
 
       </div>
 

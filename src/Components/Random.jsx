@@ -8,7 +8,7 @@ var randomCloneExport;
 
 var randomThumb;
 var randomTitle;
-var randomID;
+
 var randomDirections;
 var directionsArray;
 var trimmedDirections;
@@ -35,7 +35,7 @@ const RandomRecipe = () => {
 
     for(let prop in randomJSON){
         randomTitle = randomJSON[prop][0].strMeal;
-        randomID = randomJSON[prop][0].idMeal;
+
         randomThumb = randomJSON[prop][0].strMealThumb;
         randomDirections = randomJSON[prop][0].strInstructions;
         directionsArray = randomDirections.split(' ');

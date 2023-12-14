@@ -3,12 +3,31 @@ import { Link } from "react-router-dom";
 
 const CAT_URL = 'https://www.themealdb.com/api/json/v1/1/categories.php';
 
+var responseCAT;
+var catJSON;
+var catClone;
+
+async function getDatafromTheAPI(){
+  try{
+      responseCAT = await fetch(CAT_URL);
+      catJSON = await responseCAT.json();
+
+  }
+  catch(e){
+      alert(`Error: ${e}`);
+    }
+}
+
+getDatafromTheAPI();
 
 const IntroCat = () => {
+
+
 
   var trimmedDescArr;
   var trimmedDesc;
   var totalTrim = [];
+
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -40,6 +59,7 @@ const IntroCat = () => {
               <div className="card-body" id={i+100}>
                 <h5 className="card-title">{d.strCategory}</h5>
                 <p className="card-text">{totalTrim[i]}..</p>
+
                 <Link to={`/SingleCategory?${d.strCategory}`} type="button" className="btn btn-sm btn-outline-dark">
                   <i className='fa fa-search m-1'></i>
                   Explore Category</Link>

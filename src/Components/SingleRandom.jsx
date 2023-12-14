@@ -4,9 +4,6 @@ import { Link } from "react-router-dom";
 import { randomCloneExport } from "./Random";
 import { IngredientsList } from "./IngredientsList";
 
-
-
-
 const SingleRandom = () => {
 
   // randomCloneExport comes from the Homepage

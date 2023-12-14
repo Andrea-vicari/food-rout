@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const CategoriesPage = () => {
     return (
     <React.Fragment>
