@@ -1,4 +1,6 @@
 import { useEffect, useState} from 'react';
+import { Link } from "react-router-dom";
+
 const CAT_URL = 'https://www.themealdb.com/api/json/v1/1/categories.php';
 
 
@@ -38,9 +40,9 @@ const IntroCat = () => {
               <div className="card-body" id={i+100}>
                 <h5 className="card-title">{d.strCategory}</h5>
                 <p className="card-text">{totalTrim[i]}..</p>
-                <button type="button" className="btn btn-sm btn-outline-dark">
+                <Link to={`/SingleCategory?${d.strCategory}`} type="button" className="btn btn-sm btn-outline-dark">
                   <i className='fa fa-search m-1'></i>
-                  Explore Category</button>
+                  Explore Category</Link>
             </div>
           </div>
         </div>
