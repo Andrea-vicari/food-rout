@@ -3,15 +3,32 @@ import { Link } from "react-router-dom";
 
 const CAT_URL = 'https://www.themealdb.com/api/json/v1/1/categories.php';
 
+var responseCAT;
+var catJSON;
+var catClone;
+
+async function getDatafromTheAPI(){
+  try{
+      responseCAT = await fetch(CAT_URL);
+      catJSON = await responseCAT.json();
+
+  }
+  catch(e){
+      alert(`Error: ${e}`);
+    }
+}
+
+getDatafromTheAPI();
 
 const IntroCat = () => {
+
+
 
   var trimmedDescArr;
   var trimmedDesc;
   var totalTrim = [];
 
   const [data, setData] = useState([]);
-
 
   useEffect(() => {
     fetch(CAT_URL)

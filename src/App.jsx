@@ -1,4 +1,6 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+
 import Header from "./Components/Common/header"
 import Footer from "./Components/Common/footer"
 import Home from "./Components/home"
@@ -8,7 +10,7 @@ import IngredientsPage from './Components/IngredientsPage';
 import LoginPage from './Components/LoginPage';
 import {SingleRandom} from './Components/SingleRandom';
 import {SingleCategory} from './Components/SingleCategory';
-import { Routes, Route } from 'react-router-dom';
+
 
 function App() {
 

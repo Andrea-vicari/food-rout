@@ -1,8 +1,8 @@
 import React from "react";
 import { BreadCumb } from "./BreadCumb";
 import { useEffect, useState} from 'react';
-import place from "../Components/placeholder.jpg"
-import { json } from "react-router-dom";
+import { SingleCategoryLoop } from "./SingleCategoryLoop";
+
 
 let currentURL = window.location.search;
 
@@ -13,31 +13,32 @@ var trimmedURL = splittedURL.join(''); // Chicken
 
 var SINGLE_CAT_URL = 'https://www.themealdb.com/api/json/v1/1/filter.php?c='.concat(trimmedURL);
 
-var cloneArra;
+var catToExp;
+
 const SingleCategory = () => {
 
 
-  const [advice, setAdvice] = useState([]);
 
-  useEffect(() => {
-      const url = SINGLE_CAT_URL;
+const [data, setData] = useState([]);
 
-      const fetchData = async () => {
-          try {
-              const response = await fetch(url);
-              const json = await response.json();
-              console.log(json);
-              cloneArra = {...json} ;
-              console.log(cloneArra);
-              setAdvice(advice.meals);
 
-          } catch (error) {
-              console.log("error", error);
-          }
-      };
+useEffect(() => {
+  fetchData();
+}, []);
 
-      fetchData();
-  }, []);
+    const fetchData = async () => {
+      try {
+        const response = await fetch(SINGLE_CAT_URL);
+        const result = await response.json();
+        setData(result);
+        console.log(result);
+
+        //catToExp = [...result];
+
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
 
     return (
 
@@ -53,22 +54,7 @@ const SingleCategory = () => {
             </div>
         </div>
 
-        <div className="col-sm-4">
-            <div className="card mb-3" width='540'>
-              <div className="row g-0">
-                <div className="col-md-4">
-                  <img src={place} className="img-fluid rounded-start" alt="..."/>
-                </div>
-                <div className="col-md-8">
-                  <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-                    <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p className="card-text"><small className="text-body-secondary">Last updated 3 mins ago</small></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-        </div>
+        <SingleCategoryLoop />
 
       </div>
 
@@ -78,4 +64,4 @@ const SingleCategory = () => {
 
 };
 
-export {SingleCategory};
+export {SingleCategory, catToExp};
