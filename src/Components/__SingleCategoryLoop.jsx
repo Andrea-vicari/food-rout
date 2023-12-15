@@ -1,9 +1,14 @@
 import React from "react";
-import { useEffect, useState} from 'react';
 import { catToExp } from "./SingleCategory";
+import { useState, useEffect } from "react";
+
 
 const SingleCategoryLoop = () => {
 
+
+    const [data, setData] = useState(catToExp);
+
+console.log(data)
 
 
     return (

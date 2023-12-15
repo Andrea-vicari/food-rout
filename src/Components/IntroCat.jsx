@@ -13,6 +13,7 @@ const IntroCat = () => {
   const [data, setData] = useState([]);
 
 
+
   useEffect(() => {
     fetch(CAT_URL)
       .then(res => res.json())
@@ -24,12 +25,14 @@ const IntroCat = () => {
   for(let i=0;i<data.length;i++){
     // Get the descriprtion and split int an array
     trimmedDescArr = data[i].strCategoryDescription.split(' ');
+
     // Cut the array to max N length
     trimmedDescArr.length = 10;
 
     trimmedDesc = trimmedDescArr.join(' ');
     totalTrim.push(trimmedDesc);
   }
+
 
 
     return(

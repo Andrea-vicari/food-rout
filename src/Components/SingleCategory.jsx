@@ -1,7 +1,7 @@
 import React from "react";
 import { BreadCumb } from "./BreadCumb";
 import { useEffect, useState} from 'react';
-import { SingleCategoryLoop } from "./SingleCategoryLoop";
+
 
 
 let currentURL = window.location.search;
@@ -13,15 +13,13 @@ var trimmedURL = splittedURL.join(''); // Chicken
 
 var SINGLE_CAT_URL = 'https://www.themealdb.com/api/json/v1/1/filter.php?c='.concat(trimmedURL);
 
-var catToExp;
+
 
 const SingleCategory = () => {
 
-
-
 const [data, setData] = useState([]);
 
-
+var toLoop;
 useEffect(() => {
   fetchData();
 }, []);
@@ -31,37 +29,43 @@ useEffect(() => {
         const response = await fetch(SINGLE_CAT_URL);
         const result = await response.json();
         setData(result);
-        console.log(result);
-
-        //catToExp = [...result];
-
+        toLoop = {...result}
+        console.log(toLoop)
       } catch (error) {
         console.error('Error fetching data:', error);
       }
     };
-
     return (
 
+toLoop.map((d, i) => (
     <React.Fragment>
       <BreadCumb />
 
       <div className="container">
-      <div className="container mx-auto">
-            <div className="col-md-10 mx-auto text-center py-lg-2">
-            <h1 className="text-center title py-2">{trimmedURL}</h1>
-            <div className="separator"></div>
-            <p className="text-center">Our category section is filled with a variety of mouth-watering dishes that are sure to satisfy your cravings. From hearty main courses to sweet and satisfying desserts, we have something for everyone. So, take a look around and see what catches your eye</p>
+
+        <div className="col-sm-4">
+            <div className="card mb-3" width='540'>
+              <div className="row g-0">
+                <div className="col-md-4">
+                  <img src="" className="img-fluid rounded-start" alt="..."/>
+                </div>
+                <div className="col-md-8">
+                  <div className="card-body">
+                    <h5 className="card-title">Card title</h5>
+                    <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p className="card-text"><small className="text-body-secondary">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+              </div>
             </div>
         </div>
-
-        <SingleCategoryLoop />
 
       </div>
 
     </React.Fragment>
-
+    ))
     )
 
 };
 
-export {SingleCategory, catToExp};
+export {SingleCategory};

@@ -8,7 +8,7 @@ var excerpt;
 // Function to short down a long description and generate an excerpt
 const shorter = (phrase) =>{
   let arrayPh = phrase.split(' ');
-  console.log(arrayPh);
+  //console.log(arrayPh);
   arrayPh.length = 12;
   excerpt = arrayPh.join(' ');
 }
