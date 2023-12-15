@@ -6,6 +6,8 @@ import { IngredientsList } from "./IngredientsList";
 
 const SingleRandom = () => {
 
+
+
   // randomCloneExport comes from the Homepage
   // it is the complete (clone)of the random recipe
 

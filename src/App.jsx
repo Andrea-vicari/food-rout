@@ -10,7 +10,7 @@ import IngredientsPage from './Components/IngredientsPage';
 import LoginPage from './Components/LoginPage';
 import {SingleRandom} from './Components/SingleRandom';
 import {SingleCategory} from './Components/SingleCategory';
-
+import {SingleCategoryLoop} from './Components/SingleCategoryLoop';
 
 function App() {
 
@@ -27,6 +27,7 @@ function App() {
         <Route path="/Login" element={<LoginPage />} />
         <Route path="/SingleRandom" element={<SingleRandom />} />
         <Route path="/SingleCategory" element={<SingleCategory />} />
+        <Route path="/SingleCategoryLoop" element={<SingleCategoryLoop />} />
       </Routes>
 
      <Footer />

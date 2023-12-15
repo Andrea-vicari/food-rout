@@ -2,25 +2,23 @@ import React from "react";
 import { BreadCumb } from "./BreadCumb";
 import { catExpObj } from "./IntroCat";
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
-import { Navigate } from "react-router-dom";
+import { Link, useLocation} from "react-router-dom";
 
 
 
-var ok = false;
 
-if(catExpObj == undefined){
-  <Navigate replace to={"/"}/>
-}
-
-
+var SingleCatLoopExp;
+var whatClickedFromHome
 var cloneFiltered;
 
 const SingleCategory = () => {
 
 
+
+  console.log(catExpObj)
+
   let { state } = useLocation();
-  let whatClickedFromHome = state.clicked; // example "Chicken"
+  whatClickedFromHome = state.clicked; // example "Chicken"
 
   cloneFiltered = catExpObj.filter((element)=> element.strCategory == whatClickedFromHome);
 
@@ -37,32 +35,37 @@ const SingleCategory = () => {
       .catch(err => console.log(err));
     },[]);
 
-
+    SingleCatLoopExp = [...data]
 
 return (
 
-  <React.Fragment>
-    <BreadCumb />
 
-    <div className="container-fluid py-5 bg-food">
-      <div className="main col-md-8 mx-auto py-5">
-        <div className="px-4 my-5 text-center">
-            <img className="d-block mx-auto mb-4" src={cloneFiltered[0].strCategoryThumb} alt="" width="272"/>
-            <h1 className="display-5 fw-bold text-body-emphasis">{cloneFiltered[0].strCategory}</h1>
-            <div className="col-lg-6 mx-auto">
-              <p className="fs-4 lead mb-4">{cloneFiltered[0].strCategoryDescription}</p>
 
-               <button type="button" className="btn btn-outline-dark btn-lg px-4">Discover selected recipes</button>
 
-            </div>
-        </div>
+    <main>
+  <section className="py-5 text-center container bg-food">
+    <div className="row py-lg-5">
+      <div className="col-lg-6 col-md-8 mx-auto">
+        <h1 className="fw-light">{cloneFiltered[0].strCategory}</h1>
+        <p className="lead text-body-secondary">{cloneFiltered[0].strCategoryDescription}</p>
+        <p>
+          <Link to={`/SingleCategoryLoop?${whatClickedFromHome}`} className="btn btn-secondary my-2">Secondary action</Link>
+        </p>
       </div>
-      </div>
+    </div>
+  </section>
 
-  </React.Fragment>
+
+
+</main>
+
+
+
+
+
 
   )
 
 };
 
-export {SingleCategory};
+export {SingleCategory, SingleCatLoopExp, whatClickedFromHome};

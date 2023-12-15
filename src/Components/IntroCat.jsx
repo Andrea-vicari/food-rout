@@ -52,9 +52,9 @@ const IntroCat = () => {
                 <h5 className="card-title">{d.strCategory}</h5>
                 <p className="card-text">{totalTrim[i]}..</p>
 
-<Link to={`/SingleCategory?${d.strCategory}`} type="button" state={{ clicked: d.strCategory }} className="btn btn-sm btn-outline-dark">
-<i className='fa fa-search m-1'></i>
-Explore Category</Link>
+              <Link to={`/SingleCategory?${d.strCategory}`} type="button" state={{ clicked: d.strCategory }} className="btn btn-sm btn-outline-dark">
+              <i className='fa fa-search m-1'></i>
+              Explore Category</Link>
             </div>
           </div>
         </div>
