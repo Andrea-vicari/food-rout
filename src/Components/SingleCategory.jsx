@@ -3,7 +3,6 @@ import { BreadCumb } from "./BreadCumb";
 import { useEffect, useState} from 'react';
 
 
-
 let currentURL = window.location.search;
 
 console.log(currentURL); // ?52XXX
@@ -15,11 +14,15 @@ var SINGLE_CAT_URL = 'https://www.themealdb.com/api/json/v1/1/filter.php?c='.con
 
 
 
+
+var toLoop;
+
+
 const SingleCategory = () => {
 
 const [data, setData] = useState([]);
 
-var toLoop;
+
 useEffect(() => {
   fetchData();
 }, []);
@@ -29,15 +32,20 @@ useEffect(() => {
         const response = await fetch(SINGLE_CAT_URL);
         const result = await response.json();
         setData(result);
-        toLoop = {...result}
-        console.log(toLoop)
+        console.log(result)
+
+
+
       } catch (error) {
         console.error('Error fetching data:', error);
       }
     };
+
+
+
     return (
 
-toLoop.map((d, i) => (
+
     <React.Fragment>
       <BreadCumb />
 
@@ -63,7 +71,7 @@ toLoop.map((d, i) => (
       </div>
 
     </React.Fragment>
-    ))
+
     )
 
 };
