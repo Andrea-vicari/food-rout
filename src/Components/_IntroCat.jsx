@@ -3,10 +3,8 @@ import { Link } from "react-router-dom";
 
 const CAT_URL = 'https://www.themealdb.com/api/json/v1/1/categories.php';
 
-var catExpObj;
+
 const IntroCat = () => {
-
-
 
   var trimmedDescArr;
   var trimmedDesc;
@@ -24,13 +22,7 @@ const IntroCat = () => {
       .catch(err => console.log(err));
   },[]);
 
-
-
-  catExpObj = [...data]
-
   for(let i=0;i<data.length;i++){
-
-
     // Get the descriprtion and split int an array
     trimmedDescArr = data[i].strCategoryDescription.split(' ');
 
@@ -40,6 +32,8 @@ const IntroCat = () => {
     trimmedDesc = trimmedDescArr.join(' ');
     totalTrim.push(trimmedDesc);
   }
+
+
 
     return(
 
@@ -52,9 +46,9 @@ const IntroCat = () => {
                 <h5 className="card-title">{d.strCategory}</h5>
                 <p className="card-text">{totalTrim[i]}..</p>
 
-<Link to={`/SingleCategory?${d.strCategory}`} type="button" state={{ clicked: d.strCategory }} className="btn btn-sm btn-outline-dark">
-<i className='fa fa-search m-1'></i>
-Explore Category</Link>
+                <Link to={`/SingleCategory?${d.strCategory}`} type="button" className="btn btn-sm btn-outline-dark">
+                  <i className='fa fa-search m-1'></i>
+                  Explore Category</Link>
             </div>
           </div>
         </div>
@@ -65,4 +59,4 @@ Explore Category</Link>
       ))
     )
 }
-export {IntroCat, catExpObj};
+export {IntroCat};

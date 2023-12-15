@@ -22,3 +22,9 @@
   background-position: center;
   background-size: cover;
 }
+.bg-food{
+  background-image: url(./Components/cat_bg_opt.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

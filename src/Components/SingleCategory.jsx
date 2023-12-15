@@ -1,78 +1,67 @@
 import React from "react";
 import { BreadCumb } from "./BreadCumb";
-import { useEffect, useState} from 'react';
-
-
-let currentURL = window.location.search;
-
-console.log(currentURL); // ?52XXX
-let splittedURL = currentURL.split(''); // ?,C,h,i,c,k,e,n
-splittedURL.shift(); // C,h,i,c,k,e,n
-var trimmedURL = splittedURL.join(''); // Chicken
-
-var SINGLE_CAT_URL = 'https://www.themealdb.com/api/json/v1/1/filter.php?c='.concat(trimmedURL);
+import { catExpObj } from "./IntroCat";
+import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 
 
+var ok = false;
 
-var toLoop;
+if(catExpObj == undefined){
+  <Navigate replace to={"/"}/>
+}
 
+
+var cloneFiltered;
 
 const SingleCategory = () => {
 
-const [data, setData] = useState([]);
+
+  let { state } = useLocation();
+  let whatClickedFromHome = state.clicked; // example "Chicken"
+
+  cloneFiltered = catExpObj.filter((element)=> element.strCategory == whatClickedFromHome);
+
+  var SINGLE_CAT_URL = 'https://www.themealdb.com/api/json/v1/1/filter.php?c='.concat(whatClickedFromHome);
 
 
-useEffect(() => {
-  fetchData();
-}, []);
+  const [data, setData] = useState([]);
 
-    const fetchData = async () => {
-      try {
-        const response = await fetch(SINGLE_CAT_URL);
-        const result = await response.json();
-        setData(result);
-        console.log(result)
-
-
-
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
+    useEffect(() => {
+      fetch(SINGLE_CAT_URL)
+      .then(res => res.json())
+      .then((json) => setData(json.meals))
+      .then(console.log(data))
+      .catch(err => console.log(err));
+    },[]);
 
 
 
-    return (
+return (
 
+  <React.Fragment>
+    <BreadCumb />
 
-    <React.Fragment>
-      <BreadCumb />
+    <div className="container-fluid py-5 bg-food">
+      <div className="main col-md-8 mx-auto py-5">
+        <div className="px-4 my-5 text-center">
+            <img className="d-block mx-auto mb-4" src={cloneFiltered[0].strCategoryThumb} alt="" width="272"/>
+            <h1 className="display-5 fw-bold text-body-emphasis">{cloneFiltered[0].strCategory}</h1>
+            <div className="col-lg-6 mx-auto">
+              <p className="fs-4 lead mb-4">{cloneFiltered[0].strCategoryDescription}</p>
 
-      <div className="container">
+               <button type="button" className="btn btn-outline-dark btn-lg px-4">Discover selected recipes</button>
 
-        <div className="col-sm-4">
-            <div className="card mb-3" width='540'>
-              <div className="row g-0">
-                <div className="col-md-4">
-                  <img src="" className="img-fluid rounded-start" alt="..."/>
-                </div>
-                <div className="col-md-8">
-                  <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-                    <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p className="card-text"><small className="text-body-secondary">Last updated 3 mins ago</small></p>
-                  </div>
-                </div>
-              </div>
             </div>
         </div>
-
+      </div>
       </div>
 
-    </React.Fragment>
+  </React.Fragment>
 
-    )
+  )
 
 };
 
