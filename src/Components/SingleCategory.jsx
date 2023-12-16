@@ -49,7 +49,7 @@ return (
         <h1 className="fw-light">{cloneFiltered[0].strCategory}</h1>
         <p className="lead text-body-secondary">{cloneFiltered[0].strCategoryDescription}</p>
         <p>
-          <Link to={`/SingleCategoryLoop?${whatClickedFromHome}`} className="btn btn-secondary my-2">Secondary action</Link>
+          <Link to={`/SingleCategoryLoop?${whatClickedFromHome}`} preventScrollReset={true} className="btn btn-secondary my-2">Secondary action</Link>
         </p>
       </div>
     </div>
