@@ -1,7 +1,7 @@
 import React from "react";
 import { randomCloneExport } from "./Random";
 
-const IngredientsList = () => {
+const IngredientsListRandom = () => {
 
   var ingredientArray = [];
   var measureArray = [];
@@ -44,4 +44,4 @@ const IngredientsList = () => {
       ))
     )
 }
-export {IngredientsList};
+export {IngredientsListRandom};
