@@ -1,6 +1,5 @@
 import React from "react";
 import { SingleCatLoopExp, whatClickedFromHome } from "./SingleCategory";
-import placeImg from "../Components/placeholder.jpg"
 
 const SingleCategoryLoop = () => {
 
@@ -11,21 +10,24 @@ return (
   <div className="album py-5 bg-body-tertiary">
   <div className="container">
      <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-      <div className="col">
+     {SingleCatLoopExp.map((e)=>{
+       return (
+        <div className="col">
         <div className="card shadow-sm">
-          <img src={placeImg} className="bd-placeholder-img card-img-top"/>
+          <img src={e.strMealThumb} className="bd-placeholder-img card-img-top"/>
           <div className="card-body">
-            <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <h4>{e.strMeal}</h4>
             <div className="d-flex justify-content-between align-items-center">
-              <div className="btn-group">
-                <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
-                <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
-              </div>
-              <small className="text-body-secondary">9 mins</small>
+
+                <button type="button" className="btn btn-sm btn-outline-secondary">Enjoy the recipe</button>
+
+              <small className="text-body-secondary">{whatClickedFromHome}</small>
             </div>
           </div>
         </div>
       </div>
+     );})}
+
     </div>
   </div>
 </div>
@@ -34,4 +36,4 @@ return (
 
 };
 
-export {SingleCategoryLoop};
+export {SingleCategoryLoop,SingleCatLoopExp};

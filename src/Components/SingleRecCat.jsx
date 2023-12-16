@@ -1,10 +1,10 @@
 import React from "react";
 import { BreadCumb } from "./BreadCumb";
 import { Link } from "react-router-dom";
-import { randomCloneExport } from "./Random";
-import { IngredientsListRandom } from "./IngredientsListRandom";
+import { SingleCatLoopExp } from "./SingleCategoryLoop";
 
-const SingleRandom = () => {
+
+const SingleRecCat = () => {
 
   // randomCloneExport comes from the Homepage
   // it is the complete (clone) of the random recipe
@@ -27,7 +27,9 @@ const SingleRandom = () => {
                   <h3>Ingredients</h3>
                 </div>
                 <div className="card-body">
-                    <IngredientsListRandom />
+
+                  {/** <IngredientsListRandom /> */}
+
                 </div>
 
                 </div>
@@ -79,4 +81,4 @@ const SingleRandom = () => {
     )
 };
 
-export {SingleRandom};
+export {SingleRecCat};
