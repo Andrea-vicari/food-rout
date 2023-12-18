@@ -6,8 +6,6 @@ import { Link, useLocation} from "react-router-dom";
 
 const SingleCategoryLoop = () => {
 
-
-
 return (
   <div className="album py-5 bg-body-tertiary">
   <div className="container">

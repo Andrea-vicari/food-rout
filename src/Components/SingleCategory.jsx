@@ -5,8 +5,6 @@ import { useState, useEffect } from "react";
 import { Link, useLocation} from "react-router-dom";
 
 
-
-
 var SingleCatLoopExp;
 var whatClickedFromHome
 var cloneFiltered;
