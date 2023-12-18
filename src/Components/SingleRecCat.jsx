@@ -21,6 +21,9 @@ var toCall;
 var titleRe;
 var thumbRe;
 var directions;
+var area;
+var category;
+var videoLink;
 
 const SingleRecCat = (props) => {
 
@@ -55,6 +58,9 @@ const SingleRecCat = (props) => {
       titleRe = newData.meals[0].idMeal;
       thumbRe = newData.meals[0].strMealThumb;
       directions = newData.meals[0].strInstructions;
+      area = newData.meals[0].strArea;
+      category = newData.meals[0].strCategory;
+      videoLink = newData.meals[0].strYoutube;
     };
 
     fetchData();
@@ -92,19 +98,19 @@ const SingleRecCat = (props) => {
               <div className="bg-body-secondary py-3">
                             <Link className="icon-link text-decoration-none fs-6 text-dark mx-2" to="/CategoriesPage">
                                 <i className="fa fa-globe fs-4 text-warning display-1"></i>
-                                {/** randomCloneExport.meals[0].strArea */}
+                                {area}
 
                               </Link>
 
 
                             <Link className="icon-link text-decoration-none fs-6 text-dark mx-2" to="/CategoriesPage">
                                 <i className="fa fa-lemon fs-4 text-warning display-1"></i>
-                                {/**randomCloneExport.meals[0].strCategory */}
+                                {category}
 
                               </Link>
 
 
-                            <Link className="icon-link text-decoration-none fs-6 text-dark mx-2" target="_blank">
+                            <Link className="icon-link text-decoration-none fs-6 text-dark mx-2" to={videoLink} target="_blank">
                                 <i className="fab fa-youtube fs-4 text-danger display-1"></i>
                                 Video
                               </Link>

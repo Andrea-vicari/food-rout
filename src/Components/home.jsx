@@ -9,9 +9,6 @@ import { IntroCountries } from './IntroCountries';
 function Home() {
 
 
-var catExpObj;
-
-
   return (
     <React.Fragment>
         <Carousel />

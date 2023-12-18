@@ -6,8 +6,6 @@ var CAT_URL = 'https://www.themealdb.com/api/json/v1/1/categories.php';
 var catExpObj;
 const IntroCat = () => {
 
-  const [urlAPI, setURL] = useState("");
-
 
   var trimmedDescArr;
   var trimmedDesc;
@@ -57,8 +55,6 @@ const IntroCat = () => {
             </div>
           </div>
         </div>
-
-
 
 
 

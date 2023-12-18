@@ -12,8 +12,7 @@ import ScrollToTop from './Components/ScrollToTop';
 import {SingleRandom} from './Components/SingleRandom';
 import {SingleRecCat} from './Components/SingleRecCat';
 import {SingleCategory} from './Components/SingleCategory';
-//import {SingleCategoryLoop} from './Components/SingleCategoryLoop';
-import {SingleRecDesc} from './Components/SingleRecDesc';
+
 
 function App() {
 
@@ -31,8 +30,6 @@ function App() {
         <Route path="/SingleRandom" element={<SingleRandom />} />
         <Route path="/SingleCategory" element={<SingleCategory />} />
         <Route path="/SingleRecCat" element={<SingleRecCat />} />
-
-        <Route path="/SingleRecDesc" element={<SingleRecDesc />} />
       </Routes>
       </ScrollToTop>
 

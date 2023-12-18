@@ -1,7 +1,7 @@
 import React from "react";
 import { BreadCumb } from "./BreadCumb";
 import { catExpObj } from "./IntroCat";
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect} from "react";
 import { Link, useLocation} from "react-router-dom";
 
 
@@ -39,7 +39,6 @@ const SingleCategory = () => {
 
     console.log(SingleCatLoopExp)
 
-    {/*https://www.themealdb.com/api/json/v1/1/lookup.php?i= */}
 
     SingleCatLoopExp.forEach(element => {
       arrayofID.push([idAPI.concat(element.idMeal), element.idMeal, element.strMeal])
@@ -50,7 +49,7 @@ const SingleCategory = () => {
 return (
 
     <main>
-  <section className="py-5 text-center container bg-food">
+  <section className="py-5 text-center container-fluid bg-food">
     <div className="row py-lg-5">
       <div className="col-lg-6 col-md-8 mx-auto">
         <h1 className="fw-light">{cloneFiltered[0].strCategory}</h1>
@@ -59,7 +58,7 @@ return (
     </div>
   </section>
 
-  <div className="album py-5 bg-body-tertiary">
+  <div className="album py-5">
   <div className="container">
      <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
      {SingleCatLoopExp.map((e)=>{
