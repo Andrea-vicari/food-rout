@@ -1,8 +1,8 @@
 import React from "react";
-import { SingleRecExp } from "./SingleRecCat";
+//import { SingleRecExp } from "./SingleRecCat";
 import place from "../Components/placeholder.jpg";
 
-console.log(SingleRecExp)
+//console.log(SingleRecExp)
 
 
 const SingleRecDesc = () => {

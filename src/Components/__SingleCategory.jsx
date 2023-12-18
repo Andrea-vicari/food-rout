@@ -3,14 +3,11 @@ import { BreadCumb } from "./BreadCumb";
 import { catExpObj } from "./IntroCat";
 import { useState, useEffect, useContext } from "react";
 import { Link, useLocation} from "react-router-dom";
-
+import {UserContext} from "./IntroCat";
 
 var SingleCatLoopExp;
 var whatClickedFromHome
 var cloneFiltered;
-
-var arrayofID = [];
-var idAPI = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=";
 
 const SingleCategory = () => {
 
@@ -30,22 +27,11 @@ const SingleCategory = () => {
       fetch(SINGLE_CAT_URL)
       .then(res => res.json())
       .then((json) => setData(json.meals))
-      .then(SingleCatLoopExp = [...data])
       .then(console.log(data))
       .catch(err => console.log(err));
     },[]);
 
     SingleCatLoopExp = [...data]
-
-    console.log(SingleCatLoopExp)
-
-    {/*https://www.themealdb.com/api/json/v1/1/lookup.php?i= */}
-
-    SingleCatLoopExp.forEach(element => {
-      arrayofID.push([idAPI.concat(element.idMeal), element.idMeal, element.strMeal])
-
-    });
-
 
 return (
 
@@ -55,6 +41,9 @@ return (
       <div className="col-lg-6 col-md-8 mx-auto">
         <h1 className="fw-light">{cloneFiltered[0].strCategory}</h1>
         <p className="lead text-body-secondary">{cloneFiltered[0].strCategoryDescription}</p>
+        <p>
+          <Link to={`/SingleCategoryLoop?${whatClickedFromHome}`} preventScrollReset={true} className="btn btn-secondary my-2">See all the recipes</Link>
+        </p>
       </div>
     </div>
   </section>
@@ -83,11 +72,9 @@ return (
     </div>
   </div>
   </div>
-
-
 </main>
   )
 
 };
 
-export {SingleCategory, arrayofID};
+export {SingleCategory, SingleCatLoopExp, whatClickedFromHome};

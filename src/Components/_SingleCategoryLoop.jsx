@@ -9,7 +9,9 @@ const SingleCategoryLoop = () => {
 
   const [all,setAll] = useState([]);
 
-
+  useEffect(() => {
+    setAll(SingleCatLoopExp)
+  },[])
 
 
 

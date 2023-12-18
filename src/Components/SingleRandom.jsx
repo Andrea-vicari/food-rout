@@ -72,7 +72,7 @@ const SingleRandom = () => {
 
 
         </div>
-        </div>
+      </div>
 
     </React.Fragment>
 

@@ -4,7 +4,14 @@ import { IntroCat } from "./IntroCat";
 import { RandomRecipe } from './Random';
 import { IntroCountries } from './IntroCountries';
 
+
+
 function Home() {
+
+
+var catExpObj;
+
+
   return (
     <React.Fragment>
         <Carousel />

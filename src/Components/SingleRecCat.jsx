@@ -2,13 +2,10 @@ import React from "react";
 import { BreadCumb } from "./BreadCumb";
 import { useLocation} from "react-router-dom";
 import { useState, useEffect } from "react";
-import { SingleRecDesc } from "./SingleRecDesc";
+import { arrayofID } from "./SingleCategory";
 import { Link } from "react-router-dom";
 
 
-
-// try to get the recipe and pass it yo the full desc component
-// Assign to currentURl the current window url (Example ?British, ?American)
 let currentURL = window.location.search;
 
 // Split the URl into an Array
@@ -16,74 +13,131 @@ let splittedURL = currentURL.split('');
 // Remove the first char => ?
 splittedURL.shift();
 // Re join without ? and assign to trimmedURL (EX. French)
-const trimmedURL = splittedURL.join('');
-console.log(trimmedURL)
-// Address to fetch data random.php data
-var API_URL = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i='.concat(trimmedURL);
-console.log(API_URL);
-
-var responseAPI;
-var singleJSON;
-var SingleRecExp;
-
-
-async function getDatafromTheAPI(){
-  try{
-      responseAPI = await fetch(API_URL);
-      singleJSON = await responseAPI.json();
-      console.log(singleJSON);
-
-      console.log(SingleRecExp);
-  }
-  catch(e){
-      alert(`Error: ${e}`);
-    }
-}
-
-SingleRecExp = {...singleJSON};
+var trimmedURL = splittedURL.join('');
+console.log(trimmedURL);
 
 var whatID;
+var toCall;
+var titleRe;
+var thumbRe;
+var directions;
 
-const SingleRecCat = () => {
+const SingleRecCat = (props) => {
 
-getDatafromTheAPI();
 
   let { state } = useLocation();
   whatID = state.clicked; // example "45678"
   console.log(whatID)
 
-  var SINGLE_REC_URL = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i='.concat(whatID);
 
-  console.log(SINGLE_REC_URL)
+  arrayofID.forEach(element => {
 
-  const [data, setData] = useState([]);
+      if(element[1] == whatID){
+
+        toCall = element[0]
+        titleRe = element[2]
+      }
+
+
+  });
+
+
+  console.log(toCall)
+
+  const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch(SINGLE_REC_URL)
-    .then(res => res.json())
-    .then((json) => setData(json.meals))
-    .then(console.log(data))
-    .catch(err => console.log(err));
-  },[]);
+    const fetchData = async () => {
+      const response = await fetch(toCall);
+      const newData = await response.json();
+      setData(newData);
+      console.log(newData)
+      titleRe = newData.meals[0].idMeal;
+      thumbRe = newData.meals[0].strMealThumb;
+      directions = newData.meals[0].strInstructions;
+    };
 
+    fetchData();
+  }, [props.meals]);
 
-  const reload = ()=>{
-    location.reload();
-    }
-
+    if(data){
 
     return (
 
     <React.Fragment>
       <BreadCumb />
-      <button type="button" className="btn btn-sm btn-outline-secondary" onClick={()=>reload()}>RELOAD</button>
-      <Link type="button" reloadDocument to={`/SingleRecDesc?${whatID}`} state={{ clicked:whatID }} className="btn btn-sm btn-outline-secondary">Enjoy the recipe</Link>
 
-      <SingleRecDesc />
+
+      <div className="container">
+        <div className="main col-md-12">
+        <h1 className="page-title">{titleRe}</h1>
+          <div className="row border-2">
+              <div className="col-lg-6 mb-2">
+                <img src={thumbRe} className="d-block img-fluid" loading="lazy"/>
+              </div>
+              <div className="col-lg-6">
+                <div className="card mb-4 rounded-3 shadow-sm">
+                <div className="card-header py-1">
+                  <h3>Ingredients</h3>
+                </div>
+                <div className="card-body">
+                 {/* <IngredientsListRandom /> */ }
+                </div>
+
+                </div>
+              </div>
+
+              <h3>Directions</h3>
+              <p>{directions}</p>
+              <div className="bg-body-secondary py-3">
+                            <Link className="icon-link text-decoration-none fs-6 text-dark mx-2" to="/CategoriesPage">
+                                <i className="fa fa-globe fs-4 text-warning display-1"></i>
+                                {/** randomCloneExport.meals[0].strArea */}
+
+                              </Link>
+
+
+                            <Link className="icon-link text-decoration-none fs-6 text-dark mx-2" to="/CategoriesPage">
+                                <i className="fa fa-lemon fs-4 text-warning display-1"></i>
+                                {/**randomCloneExport.meals[0].strCategory */}
+
+                              </Link>
+
+
+                            <Link className="icon-link text-decoration-none fs-6 text-dark mx-2" target="_blank">
+                                <i className="fab fa-youtube fs-4 text-danger display-1"></i>
+                                Video
+                              </Link>
+              </div>
+                    <div className="card-header py-3">
+                        <div className="container">
+                          <p className="my-0 fs-5">Add to Favorites</p>
+                          <i className="fs-2 fa fa-heart text-danger"></i>
+
+                        </div>
+                        <div className="container">
+                          <p className="my-0 fs-5">Share</p>
+                          <i className="fs-2 fab fa-instagram"></i>
+                          <i className="fs-2 fab fa-facebook mx-3"></i>
+                        </div>
+
+                    </div>
+
+          </div>
+
+
+
+        </div>
+      </div>
+
 
     </React.Fragment>
 
     )
+  }
+  else{
+    return null;
+  }
 };
 
-export {SingleRecCat, SingleRecExp};
+export {SingleRecCat};
