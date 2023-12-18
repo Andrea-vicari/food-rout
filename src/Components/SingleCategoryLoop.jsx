@@ -4,7 +4,16 @@ import { useState, useEffect } from "react";
 import { Link, useLocation} from "react-router-dom";
 
 
+
 const SingleCategoryLoop = () => {
+
+  const [all,setAll] = useState([]);
+
+
+
+
+
+
 
 return (
   <div className="album py-5 bg-body-tertiary">
@@ -36,4 +45,4 @@ return (
 
 };
 
-export {SingleCategoryLoop,SingleCatLoopExp};
+export {SingleCategoryLoop};

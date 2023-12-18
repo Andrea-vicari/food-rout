@@ -1,16 +1,19 @@
 import React from "react";
-import { SingleRecCat, SingleRecExp} from "./SingleRecCat";
+import { SingleRecExp } from "./SingleRecCat";
 import place from "../Components/placeholder.jpg";
 
 console.log(SingleRecExp)
+
+
 const SingleRecDesc = () => {
+
 
 
     return(
 
       <div className="container">
         <div className="main col-md-12">
-        <h1 className="page-title">{SingleRecExp.strCategory}</h1>
+        <h1 className="page-title">AIUTOOO</h1>
           <div className="row border-2">
               <div className="col-lg-6 mb-2">
                 <img src={place} className="d-block img-fluid" loading="lazy"/>

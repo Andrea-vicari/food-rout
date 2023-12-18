@@ -14,8 +14,6 @@ const IntroCat = () => {
 
   const [data, setData] = useState([]);
 
-
-
   useEffect(() => {
     fetch(CAT_URL)
       .then(res => res.json())
