@@ -2,6 +2,11 @@
 
 <img src="https://github.com/Andrea-vicari/food-rout/blob/master/src/Components/Common/Logo_Food_black.svg" width="200px">
 
+## Technologies
+<img src="https://github.com/Andrea-vicari/Andrea-vicari/blob/main/Bootstrap_logo.png" style="width:45px"> <img src="https://github.com/Andrea-vicari/Andrea-vicari/blob/main/React_logo.png" style="width:45px">
+<img src="https://github.com/Andrea-vicari/Andrea-vicari/blob/main/JS_logo.png" style="width:45px">
+<img src="https://github.com/Andrea-vicari/Andrea-vicari/blob/main/vite.svg" style="width:40px">
+
 ## Intro
 A Single Page Application built with React and API\
 Project installed using Vite and Bootstrap, with the npm package `npm install react-bootstrap bootstrap.`
