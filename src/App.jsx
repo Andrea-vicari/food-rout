@@ -12,7 +12,8 @@ import ScrollToTop from './Components/ScrollToTop';
 import {SingleRandom} from './Components/SingleRandom';
 import {SingleRecCat} from './Components/SingleRecCat';
 import {SingleCategory} from './Components/SingleCategory';
-
+import {SingleCountry} from './Components/SingleCountry';
+import {SingleRecCountry} from './Components/SingleRecCountry';
 
 function App() {
 
@@ -30,6 +31,8 @@ function App() {
         <Route path="/SingleRandom" element={<SingleRandom />} />
         <Route path="/SingleCategory" element={<SingleCategory />} />
         <Route path="/SingleRecCat" element={<SingleRecCat />} />
+        <Route path="/SingleCountry" element={<SingleCountry />} />
+        <Route path="/SingleRecCountry" element={<SingleRecCountry />} />
       </Routes>
       </ScrollToTop>
 

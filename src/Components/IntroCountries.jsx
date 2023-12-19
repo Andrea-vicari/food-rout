@@ -13,6 +13,7 @@ const shorter = (phrase) =>{
   excerpt = arrayPh.join(' ');
 }
 
+var cloneCountry;
 
 const IntroCountries = () => {
 
@@ -27,142 +28,140 @@ const IntroCountries = () => {
   },[]);
 
 
-  // !! Important: ES6 clone of data, to delete countries with empty flag from the
-  //  Clone, otherwise it will crash, can't loop through empty props in the object
-  const cloneData = [...data]
+  cloneCountry = [...data]
 
 
-  for(let i=0;i<cloneData.length;i++){
+  for(let i=0;i<cloneCountry.length;i++){
 
 
-    switch (cloneData[i].strArea){
-      case "American": cloneData[i].flag = "fs-1 fi fi-us fi mb-2";
-      cloneData[i].description = areaDescription.American;
+    switch (cloneCountry[i].strArea){
+      case "American": cloneCountry[i].flag = "fs-1 fi fi-us fi mb-2";
+      cloneCountry[i].description = areaDescription.American;
       shorter(areaDescription.American);
-      cloneData[i].shorteDesc = excerpt;
+      cloneCountry[i].shorteDesc = excerpt;
       break
-      case "British": cloneData[i].flag = "fs-1 fi fi-gb fi mb-2";
-      cloneData[i].description = areaDescription.British;
+      case "British": cloneCountry[i].flag = "fs-1 fi fi-gb fi mb-2";
+      cloneCountry[i].description = areaDescription.British;
       shorter(areaDescription.British);
-      cloneData[i].shorteDesc = excerpt;
+      cloneCountry[i].shorteDesc = excerpt;
       break
-      case "Canadian": cloneData[i].flag = "fs-1 fi fi-ca fi mb-2";
-      cloneData[i].description = areaDescription.Canadian;
+      case "Canadian": cloneCountry[i].flag = "fs-1 fi fi-ca fi mb-2";
+      cloneCountry[i].description = areaDescription.Canadian;
       shorter(areaDescription.Canadian);
-      cloneData[i].shorteDesc = excerpt;
+      cloneCountry[i].shorteDesc = excerpt;
       break
-      case "Chinese": cloneData[i].flag = "fs-1 fi fi-cn fi mb-2";
-      cloneData[i].description = areaDescription.Chinese;
+      case "Chinese": cloneCountry[i].flag = "fs-1 fi fi-cn fi mb-2";
+      cloneCountry[i].description = areaDescription.Chinese;
       shorter(areaDescription.Chinese);
-      cloneData[i].shorteDesc = excerpt;
+      cloneCountry[i].shorteDesc = excerpt;
       break
-      case "Croatian": cloneData[i].flag = "fs-1 fi fi-hr fi mb-2";
-      cloneData[i].description = areaDescription.Croatian;
+      case "Croatian": cloneCountry[i].flag = "fs-1 fi fi-hr fi mb-2";
+      cloneCountry[i].description = areaDescription.Croatian;
       shorter(areaDescription.Croatian);
-      cloneData[i].shorteDesc = excerpt;
+      cloneCountry[i].shorteDesc = excerpt;
       break
-      case "Dutch": cloneData[i].flag = "fs-1 fi fi-nl fi mb-2";
-      cloneData[i].description = areaDescription.Dutch;
+      case "Dutch": cloneCountry[i].flag = "fs-1 fi fi-nl fi mb-2";
+      cloneCountry[i].description = areaDescription.Dutch;
       shorter(areaDescription.Dutch);
-      cloneData[i].shorteDesc = excerpt;
+      cloneCountry[i].shorteDesc = excerpt;
       break
-      case "Egyptian": cloneData[i].flag = "fs-1 fi fi-eg fi mb-2";
-      cloneData[i].description = areaDescription.Egyptian;
+      case "Egyptian": cloneCountry[i].flag = "fs-1 fi fi-eg fi mb-2";
+      cloneCountry[i].description = areaDescription.Egyptian;
       shorter(areaDescription.Egyptian);
-      cloneData[i].shorteDesc = excerpt;
+      cloneCountry[i].shorteDesc = excerpt;
       break
-      case "Filipino": cloneData[i].flag = "fs-1 fi fi-ph fi mb-2";
-      cloneData[i].description = areaDescription.Filipino;
+      case "Filipino": cloneCountry[i].flag = "fs-1 fi fi-ph fi mb-2";
+      cloneCountry[i].description = areaDescription.Filipino;
       shorter(areaDescription.Filipino);
-      cloneData[i].shorteDesc = excerpt;
+      cloneCountry[i].shorteDesc = excerpt;
       break
-      case "French": cloneData[i].flag = "fs-1 fi fi-fr fi mb-2";
-      cloneData[i].description = areaDescription.French;
+      case "French": cloneCountry[i].flag = "fs-1 fi fi-fr fi mb-2";
+      cloneCountry[i].description = areaDescription.French;
       shorter(areaDescription.French);
-      cloneData[i].shorteDesc = excerpt;
+      cloneCountry[i].shorteDesc = excerpt;
       break
-      case "Greek": cloneData[i].flag = "fs-1 fi fi-gr fi mb-2";
-      cloneData[i].description = areaDescription.Greek;
+      case "Greek": cloneCountry[i].flag = "fs-1 fi fi-gr fi mb-2";
+      cloneCountry[i].description = areaDescription.Greek;
       shorter(areaDescription.Greek);
-      cloneData[i].shorteDesc = excerpt;
+      cloneCountry[i].shorteDesc = excerpt;
       break
-      case "Indian": cloneData[i].flag = "fs-1 fi fi-in fi mb-2";
-      cloneData[i].description = areaDescription.Indian;
+      case "Indian": cloneCountry[i].flag = "fs-1 fi fi-in fi mb-2";
+      cloneCountry[i].description = areaDescription.Indian;
       shorter(areaDescription.Indian);
-      cloneData[i].shorteDesc = excerpt;
+      cloneCountry[i].shorteDesc = excerpt;
       break
-      case "Irish":  cloneData[i].flag = "fs-1 fi fi-ie fi mb-2";
-      cloneData[i].description = areaDescription.Irish;
+      case "Irish":  cloneCountry[i].flag = "fs-1 fi fi-ie fi mb-2";
+      cloneCountry[i].description = areaDescription.Irish;
       shorter(areaDescription.Irish);
-      cloneData[i].shorteDesc = excerpt;
+      cloneCountry[i].shorteDesc = excerpt;
       break
-      case "Italian": cloneData[i].flag = "fs-1 fi fi-it fi mb-2";
-      cloneData[i].description = areaDescription.Italian;
+      case "Italian": cloneCountry[i].flag = "fs-1 fi fi-it fi mb-2";
+      cloneCountry[i].description = areaDescription.Italian;
       shorter(areaDescription.Italian);
-      cloneData[i].shorteDesc = excerpt;
+      cloneCountry[i].shorteDesc = excerpt;
       break
-      case "Jamaican": cloneData[i].flag = "fs-1 fi fi-jm fi mb-2";
-      cloneData[i].description = areaDescription.Jamaican;
+      case "Jamaican": cloneCountry[i].flag = "fs-1 fi fi-jm fi mb-2";
+      cloneCountry[i].description = areaDescription.Jamaican;
       shorter(areaDescription.Jamaican);
-      cloneData[i].shorteDesc = excerpt;
+      cloneCountry[i].shorteDesc = excerpt;
       break
-      case "Japanese": cloneData[i].flag = "fs-1 fi fi-jp fi mb-2";
-      cloneData[i].description = areaDescription.Japanese;
+      case "Japanese": cloneCountry[i].flag = "fs-1 fi fi-jp fi mb-2";
+      cloneCountry[i].description = areaDescription.Japanese;
       shorter(areaDescription.Japanese);
-      cloneData[i].shorteDesc = excerpt;
+      cloneCountry[i].shorteDesc = excerpt;
       break
-      case "Mexican": cloneData[i].flag = "fs-1 fi fi-mx fi mb-2";
-      cloneData[i].description = areaDescription.Mexican;
+      case "Mexican": cloneCountry[i].flag = "fs-1 fi fi-mx fi mb-2";
+      cloneCountry[i].description = areaDescription.Mexican;
       shorter(areaDescription.Mexican);
-      cloneData[i].shorteDesc = excerpt;
+      cloneCountry[i].shorteDesc = excerpt;
       break
-      case "Moroccan": cloneData[i].flag = "fs-1 fi fi-ma fi mb-2";
-      cloneData[i].description = areaDescription.Moroccan;
+      case "Moroccan": cloneCountry[i].flag = "fs-1 fi fi-ma fi mb-2";
+      cloneCountry[i].description = areaDescription.Moroccan;
       shorter(areaDescription.Moroccan);
-      cloneData[i].shorteDesc = excerpt;
+      cloneCountry[i].shorteDesc = excerpt;
       break
-      case "Portuguese": cloneData[i].flag = "fs-1 fi fi-pt fi mb-2";
-      cloneData[i].description = areaDescription.Portuguese;
+      case "Portuguese": cloneCountry[i].flag = "fs-1 fi fi-pt fi mb-2";
+      cloneCountry[i].description = areaDescription.Portuguese;
       shorter(areaDescription.Portuguese);
-      cloneData[i].shorteDesc = excerpt;
+      cloneCountry[i].shorteDesc = excerpt;
       break
-      case "Russian": cloneData[i].flag = "fs-1 fi fi-ru fi mb-2";
-      cloneData[i].description = areaDescription.Russian;
+      case "Russian": cloneCountry[i].flag = "fs-1 fi fi-ru fi mb-2";
+      cloneCountry[i].description = areaDescription.Russian;
       shorter(areaDescription.Russian);
-      cloneData[i].shorteDesc = excerpt;
+      cloneCountry[i].shorteDesc = excerpt;
       break
-      case "Spanish": cloneData[i].flag = "fs-1 fi fi-es fi mb-2";
-      cloneData[i].description = areaDescription.Spanish;
+      case "Spanish": cloneCountry[i].flag = "fs-1 fi fi-es fi mb-2";
+      cloneCountry[i].description = areaDescription.Spanish;
       shorter(areaDescription.Spanish);
-      cloneData[i].shorteDesc = excerpt;
+      cloneCountry[i].shorteDesc = excerpt;
       break
-      case "Thai": cloneData[i].flag = "fs-1 fi fi-th fi mb-2";
-      cloneData[i].description = areaDescription.Thai;
+      case "Thai": cloneCountry[i].flag = "fs-1 fi fi-th fi mb-2";
+      cloneCountry[i].description = areaDescription.Thai;
       shorter(areaDescription.Thai);
-      cloneData[i].shorteDesc = excerpt;
+      cloneCountry[i].shorteDesc = excerpt;
       break
-      case "Tunisian": cloneData[i].flag = "fs-1 fi fi-tn fi mb-2";
-      cloneData[i].description = areaDescription.Tunisian;
+      case "Tunisian": cloneCountry[i].flag = "fs-1 fi fi-tn fi mb-2";
+      cloneCountry[i].description = areaDescription.Tunisian;
       shorter(areaDescription.Tunisian);
-      cloneData[i].shorteDesc = excerpt;
+      cloneCountry[i].shorteDesc = excerpt;
       break
-      case "Turkish": cloneData[i].flag = "fs-1 fi fi-tr fi mb-2";
-      cloneData[i].description = areaDescription.Turkish;
+      case "Turkish": cloneCountry[i].flag = "fs-1 fi fi-tr fi mb-2";
+      cloneCountry[i].description = areaDescription.Turkish;
       shorter(areaDescription.Turkish);
-      cloneData[i].shorteDesc = excerpt;
+      cloneCountry[i].shorteDesc = excerpt;
       break
-      case "Vietnamese": cloneData[i].flag = "fs-1 fi fi-vn fi mb-2";
-      cloneData[i].description = areaDescription.Vietnamese;
+      case "Vietnamese": cloneCountry[i].flag = "fs-1 fi fi-vn fi mb-2";
+      cloneCountry[i].description = areaDescription.Vietnamese;
       shorter(areaDescription.Vietnamese);
-      cloneData[i].shorteDesc = excerpt;
+      cloneCountry[i].shorteDesc = excerpt;
       break
-      case "Kenyan": delete cloneData[i];
+      case "Kenyan": delete cloneCountry[i];
       break
-      case "Malaysian": delete cloneData[i];
+      case "Malaysian": delete cloneCountry[i];
       break
-      case "Unknown": delete cloneData[i];
+      case "Unknown": delete cloneCountry[i];
       break
-      case "Polish": delete cloneData[i];
+      case "Polish": delete cloneCountry[i];
       break
     }
   }
@@ -170,14 +169,14 @@ const IntroCountries = () => {
 
 
   return(
-    cloneData.map((d, i) => (
+    cloneCountry.map((d, i) => (
       <div  key={d.id} className="col-sm-4">
           <div className="bg-white p-2">
           <span className={d.flag}></span>
             <h4>{d.strArea}</h4>
             <p>{d.shorteDesc} ...</p>
             <p>
-            <Link to="/SingleRecipe" className="text-danger text-decoration-none icon-link gap-1 icon-link-hover">
+            <Link to={`/SingleCountry?${d.strArea}`} type="button" state={{ clicked: d.strArea }} className="text-danger text-decoration-none icon-link gap-1 icon-link-hover">
           Read all
           <i className='fa fa-arrow-right'></i>
         </Link>
@@ -189,4 +188,4 @@ const IntroCountries = () => {
 
   )
 }
-export {IntroCountries};
+export {IntroCountries, cloneCountry};
