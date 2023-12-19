@@ -4,6 +4,8 @@ import { useLocation} from "react-router-dom";
 import { useState, useEffect } from "react";
 import { arrayofID } from "./SingleCategory";
 import { Link } from "react-router-dom";
+import { IngredientsListCat } from "./IngredientsListCat";
+
 
 
 let currentURL = window.location.search;
@@ -24,6 +26,7 @@ var directions;
 var area;
 var category;
 var videoLink;
+var sinRecIngListEXP;
 
 const SingleRecCat = (props) => {
 
@@ -61,6 +64,7 @@ const SingleRecCat = (props) => {
       area = newData.meals[0].strArea;
       category = newData.meals[0].strCategory;
       videoLink = newData.meals[0].strYoutube;
+      sinRecIngListEXP = newData.meals[0];
     };
 
     fetchData();
@@ -87,7 +91,7 @@ const SingleRecCat = (props) => {
                   <h3>Ingredients</h3>
                 </div>
                 <div className="card-body">
-                 {/* <IngredientsListRandom /> */ }
+                 <IngredientsListCat />
                 </div>
 
                 </div>
@@ -146,4 +150,4 @@ const SingleRecCat = (props) => {
   }
 };
 
-export {SingleRecCat};
+export {SingleRecCat,sinRecIngListEXP};
