@@ -28,7 +28,7 @@ function Header() {
         </li>
 
       </ul>
-      <Link to="/Login" className="text-decoration-none">
+      <Link to="/FavRecList" className="text-decoration-none">
       <i className="px-2 text-black fa fa-heart fs-5"></i>
       </Link>
     </div>

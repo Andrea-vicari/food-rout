@@ -9,6 +9,7 @@ import CountriesPage from './Components/CountriesPage';
 //import IngredientsPage from './Components/IngredientsPage';
 import LoginPage from './Components/LoginPage';
 //import {IngredientsPage} from './Components/IngredientsPage';
+import FavRecList from "./Components/FavRecList";
 import ScrollToTop from './Components/ScrollToTop';
 import {SingleRandom} from './Components/SingleRandom';
 import {SingleRecCat} from './Components/SingleRecCat';
@@ -33,6 +34,7 @@ function App() {
         <Route path="/SingleRecCat" element={<SingleRecCat />} />
         <Route path="/SingleCountry" element={<SingleCountry />} />
         <Route path="/SingleRecCountry" element={<SingleRecCountry />} />
+        <Route path="/FavRecList" element={<FavRecList />} />
       </Routes>
       </ScrollToTop>
 
