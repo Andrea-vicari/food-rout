@@ -92,13 +92,7 @@ const SingleRecCountry = (props) => {
                 <div className="card-body">
                  <IngredientsListCountry />
                 </div>
-
-                </div>
-              </div>
-
-              <h3>Directions</h3>
-              <p>{directions}</p>
-              <div className="bg-body-secondary py-3">
+                <div className="bg-body-secondary py-3">
                             <Link className="icon-link text-decoration-none fs-6 text-dark mx-2" to="/CategoriesPage">
                                 <i className="fa fa-globe fs-4 text-warning display-1"></i>
                                 {area}
@@ -124,13 +118,15 @@ const SingleRecCountry = (props) => {
                           <i className="fs-2 fa fa-heart text-danger"></i>
 
                         </div>
-                        <div className="container">
-                          <p className="my-0 fs-5">Share</p>
-                          <i className="fs-2 fab fa-instagram"></i>
-                          <i className="fs-2 fab fa-facebook mx-3"></i>
-                        </div>
 
                     </div>
+
+                </div>
+              </div>
+
+              <h3>Directions</h3>
+              <p>{directions}</p>
+
 
           </div>
 
