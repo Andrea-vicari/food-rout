@@ -1,8 +1,23 @@
-# React + Vite
+# Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img src="https://github.com/Andrea-vicari/Andrea-vicari/blob/main/Resume_GitHub_cover.jpg" width="400px">
 
-Currently, two official plugins are available:
+## Intro
+A Single page Apllication built with React and API.
+Project installed using Vite and Bootstrap, with the npm package `npm install react-bootstrap bootstrap.`
+All the recipes are from a free API
+Datas of the projects are fetched using UseState Hook and layout composed mapping through the objects. Because some elements contain HTML tags, i used `dangerouslySetInnerHTML` property to render them correctly.
+Each projects, after the click, opens the Description using the Bootstrap Modals.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Technologies
+<img src="https://github.com/Andrea-vicari/Andrea-vicari/blob/main/Bootstrap_logo.png" style="width:45px"> <img src="https://github.com/Andrea-vicari/Andrea-vicari/blob/main/React_logo.png" style="width:45px">
+<img src="https://github.com/Andrea-vicari/Andrea-vicari/blob/main/JS_logo.png" style="width:45px">
+<img src="https://github.com/Andrea-vicari/Andrea-vicari/blob/main/vite.svg" style="width:45px">
+
+
+## Live demo
+👉👉👉 [See live on Vercel](#)<br>
+
+- - -
+© 2023 Andrea Vicari | All Rights Reserved.
