@@ -3,7 +3,7 @@
 <img src="https://github.com/Andrea-vicari/food-rout/blob/master/src/Components/Common/Logo_Food_black.svg" width="200px">
 
 ## Intro
-A Single Page Application built with React and API./
+A Single Page Application built with React and API\
 Project installed using Vite and Bootstrap, with the npm package `npm install react-bootstrap bootstrap.`
 All the recipes are from a free API
 Datas of the projects are fetched using UseState Hook and layout composed mapping through the objects. Because some elements contain HTML tags, i used `dangerouslySetInnerHTML` property to render them correctly.
