@@ -39,7 +39,9 @@ const IngredientsListRandom = () => {
 
       combinedArray.map((d, i) => (
       <ul key={d} className="list-unstyled">
-        <li className="list-group-item">{d}</li>
+        <li className="list-group-item">
+          <i className="fa fa-check mx-1"></i>
+          {d}</li>
       </ul>
       ))
     )

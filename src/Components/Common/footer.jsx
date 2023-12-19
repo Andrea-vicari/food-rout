@@ -1,25 +1,27 @@
 import React from "react";
 import logo from "../Common/Logo_Food_yellow.svg"
+import logoReact from "../Common/react.svg"
 function Footer() {
   return(
 
-    <div className="container-fluid bg-dark">
+    <div className="container-fluid bg-black">
         <div className="container">
-        <footer className="d-flex flex-wrap justify-content-between align-items-center py-3">
-<p className="fs-5 col-md-4 mb-0 text-white">© 2023 World Food | A project by theMealDB</p>
+        <footer className="py-1 text-center">
+        <img src={logo} className="d-block mx-auto" width='100'></img>
+            <ul className="nav justify-content-center border-bottom">
+                <li className="nav-item mx-2">
+                  <a href="#" className="nav-link px-1 text-white small">
+                    <i className="fab fa-github mx-1"></i>
+                    GitHub
+                  </a>
+                </li>
+              <li className="nav-item mx-2"><a href="#" className="nav-link px-2 text-white small">Home</a></li>
+              <li className="nav-item mx-2"><a href="#" className="nav-link px-2 text-warning small">Credits</a></li>
+            </ul>
+      <small className="col-md-4 mb-0 mt-3 text-white text-center">© 2023 World Food || <img src={logoReact} width='20'></img> project by A.Vicari</small>
 
-<a href="/" className="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-  <img src={logo} width='200'></img>
-</a>
+          </footer>
 
-<ul className="nav col-md-4 justify-content-end">
-  <li className="nav-item"><a href="#" className="nav-link px-2 text-white fs-5">Home</a></li>
-  <li className="nav-item"><a href="#" className="nav-link px-2 text-white fs-5">Features</a></li>
-  <li className="nav-item"><a href="#" className="nav-link px-2 text-white fs-5">Pricing</a></li>
-  <li className="nav-item"><a href="#" className="nav-link px-2 text-white fs-5">FAQs</a></li>
-  <li className="nav-item"><a href="#" className="nav-link px-2 text-white fs-5">About</a></li>
-</ul>
-</footer>
     </div>
   </div>
 

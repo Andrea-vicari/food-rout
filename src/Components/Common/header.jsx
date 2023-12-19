@@ -26,13 +26,10 @@ function Header() {
           <i className='fa fa-globe'></i>
           <Link className="nav-link" to="/Countries">Countries</Link>
         </li>
-        <li className="nav-item fs-5 d-flex align-items-center">
-          <i className='fa fa-lemon'></i>
-            <Link className="nav-link" to="/Ingredients">Ingredients</Link>
-        </li>
+
       </ul>
-      <Link to="/Login">
-      <i className="px-2 text-black fa fa-user-alt fs-5"></i>Login
+      <Link to="/Login" className="text-decoration-none">
+      <i className="px-2 text-black fa fa-heart fs-5"></i>
       </Link>
     </div>
   </div>
