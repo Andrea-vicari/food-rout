@@ -1,24 +1,24 @@
 import React from "react";
-import { sinRecIngListEXP } from "./SingleRecCat";
+import { sinRecIngListEXPCountry } from "./SingleRecCountry";
 
-const IngredientsListCat = () => {
+const IngredientsListCountry = () => {
 
-  console.log(sinRecIngListEXP);
+  console.log(sinRecIngListEXPCountry);
   var ingredientArray = [];
   var measureArray = [];
   const ingreRegex = /strIngredi/;
   const measureRegex = /strMeasure/;
 
-  for(let prop in randomCloneExport.meals[0]){
+  for(let prop in sinRecIngListEXPCountry){
 
       let tester_Ingredients = ingreRegex.test(prop);
       let tester_Measures = measureRegex.test(prop);
 
-      if(tester_Ingredients==true && randomCloneExport.meals[0][prop] != "" && tester_Ingredients==true && randomCloneExport.meals[0][prop] != " " && randomCloneExport.meals[0][prop] != null){
-        ingredientArray.push(randomCloneExport.meals[0][prop]);
+      if(tester_Ingredients==true && sinRecIngListEXPCountry[prop] != "" && tester_Ingredients==true && sinRecIngListEXPCountry[prop] != " " && sinRecIngListEXPCountry[prop] != null){
+        ingredientArray.push(sinRecIngListEXPCountry[prop]);
       }
-      else if(tester_Measures==true && randomCloneExport.meals[0][prop] != "" && tester_Measures==true && randomCloneExport.meals[0][prop] != " " && randomCloneExport.meals[0][prop] != null){
-        measureArray.push(randomCloneExport.meals[0][prop]);
+      else if(tester_Measures==true && sinRecIngListEXPCountry[prop] != "" && tester_Measures==true && sinRecIngListEXPCountry[prop] != " " && sinRecIngListEXPCountry[prop] != null){
+        measureArray.push(sinRecIngListEXPCountry[prop]);
       }
       else{
         // Do nothing
@@ -47,4 +47,4 @@ const IngredientsListCat = () => {
       ))
     )
 }
-export {IngredientsListCat};
+export {IngredientsListCountry};
