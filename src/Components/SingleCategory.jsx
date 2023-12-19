@@ -45,7 +45,7 @@ const SingleCategory = () => {
 
     });
 
-
+console.log(arrayofID)
 return (
 
     <main>

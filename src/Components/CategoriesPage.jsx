@@ -1,16 +1,20 @@
 import React from "react";
-
+import { IntroCat } from "./IntroCat";
 
 const CategoriesPage = () => {
     return (
     <React.Fragment>
+      <div className="container mx-auto">
+            <div className="col-md-10 mx-auto text-center py-lg-2">
+            <h1 className="text-center title py-2">Categories</h1>
+            <div className="separator"></div>
+            <h4 className="text-center">Our category section is filled with a variety of mouth-watering dishes that are sure to satisfy your cravings. From hearty main courses to sweet and satisfying desserts, we have something for everyone. So, take a look around and see what catches your eye</h4>
+            </div>
+        </div>
+        <div id="categ_container" className="container mx-auto row g-3 py-2 row-cols-1 row-cols-lg-4">
+          <IntroCat />
+        </div>
 
-    <div className="container py-5">
-      <h1 className="text-center">Categories Page</h1>
-      <p className="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero voluptatum porro, in maiores accusamus sint debitis repellat, veniam, hic aliquam iusto molestias laboriosam neque. Corrupti obcaecati amet nostrum quaerat aliquid!</p>
-      <p className="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero voluptatum porro, in maiores accusamus sint debitis repellat, veniam, hic aliquam iusto molestias laboriosam neque. Corrupti obcaecati amet nostrum quaerat aliquid!</p>
-      <p className="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero voluptatum porro, in maiores accusamus sint debitis repellat, veniam, hic aliquam iusto molestias laboriosam neque. Corrupti obcaecati amet nostrum quaerat aliquid!</p>
-    </div>
     </React.Fragment>
 
     )

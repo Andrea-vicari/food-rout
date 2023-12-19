@@ -15,7 +15,7 @@ const Carousel = () => {
             <div className="container">
               <div className="carousel-caption">
                 <h1>Explore by Countries</h1>
-                <p className="fs-4">If you're looking for recipes from different countries, you've come to the right place! Our website features a variety of international cuisines, including Italian, Chinese, Indian, Mexican, and more.</p>
+                <p className="fs-4">If you're looking for recipes from different countries, you've come to the right place! WorldFood features a variety of international cuisines, including Italian, Chinese, Indian, Mexican, and more.</p>
                 <p><Link className="btn btn-lg btn-warning" href="/CountriesPage">Take a look</Link></p>
               </div>
             </div>
