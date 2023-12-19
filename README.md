@@ -1,6 +1,6 @@
-# Portfolio Website
+# WorldFood React App
 
-<img src="https://github.com/Andrea-vicari/Andrea-vicari/blob/main/Resume_GitHub_cover.jpg" width="400px">
+<img src="https://github.com/Andrea-vicari/food-rout/blob/master/src/Components/Common/Logo_Food_black.svg" width="400px">
 
 ## Intro
 A Single page Apllication built with React and API.
