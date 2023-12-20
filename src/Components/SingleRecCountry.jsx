@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { arrayofID } from "./SingleCountry";
 import { Link } from "react-router-dom";
 import { IngredientsListCountry } from "./IngredientsListCountry";
+import { AddToFav } from "./AddToFav";
 
 
 let currentURL = window.location.search;
@@ -26,6 +27,7 @@ var area;
 var category;
 var videoLink;
 var sinRecIngListEXPCountry;
+
 
 const SingleRecCountry = (props) => {
 
@@ -113,11 +115,7 @@ const SingleRecCountry = (props) => {
                               </Link>
               </div>
                     <div className="card-header py-3">
-                        <div className="container">
-                          <p className="my-0 fs-5">Add to Favorites</p>
-                          <i className="fs-2 fa fa-heart text-danger"></i>
-
-                        </div>
+                    <AddToFav />
 
                     </div>
 

@@ -71,6 +71,8 @@ const SingleRecCat = (props) => {
     fetchData();
   }, [props.meals]);
 
+
+
     if(data){
 
     return (
