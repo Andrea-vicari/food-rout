@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 const FavRecList = () => {
 
   console.log(recipeToAdd)
+
     return (
     <React.Fragment>
       <div className="container-fluid bg-food">
@@ -26,7 +27,7 @@ const FavRecList = () => {
                       <div className="card-body">
                         <h5 className="card-title">{e.strMeal}</h5>
 
-                        <Link to={`/SingleRecCat?${e.idMeal}`} state={{ clicked: e.idMeal }} className="icon-link gap-1 icon-link-hover">
+                        <Link to={`${e.type}${e.idMeal}`} state={{ clicked: e.idMeal }} className="icon-link gap-1 icon-link-hover">
                             Enjoy the recipe
 
                           </Link>

@@ -25,8 +25,7 @@ const SingleRandom = () => {
                 <div className="card-body">
                     <IngredientsListRandom />
                 </div>
-                {/** */}
-                {/** */}
+
                 <div className="bg-body-secondary py-3 px-3">
                             <div className="row">
                                 <div className="col-4">
@@ -38,7 +37,7 @@ const SingleRandom = () => {
                                     <span className="px-1">{randomCloneExport.meals[0].strCategory}</span>
                                 </div>
                                 <div className="col-4">
-                                <Link className="icon-link text-decoration-none fs-6 text-dark" to={videoLink} target="_blank">
+                                <Link className="icon-link text-decoration-none fs-6 text-dark" to={randomCloneExport.meals[0].strYoutube} target="_blank">
                                   <i className="fab fa-youtube fs-4 text-danger display-1 px-1"></i>
                                     Video
                                 </Link>

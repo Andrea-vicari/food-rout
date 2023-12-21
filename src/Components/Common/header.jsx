@@ -15,15 +15,15 @@ function Header() {
     <div className="collapse navbar-collapse" id="navbarCollapse">
       <ul className="navbar-nav col-lg-10  d-flex justify-content-around align-content-end">
         <li className="nav-item fs-5 d-flex align-items-center">
-          <i className='fa fa-home'></i>
+          <i className='fa fa-home d-none d-sm-block'></i>
             <Link className="nav-link active" to="/">Home</Link>
         </li>
         <li className="nav-item fs-5 d-flex align-items-center">
-          <i className='fa fa-book'></i>
+          <i className='fa fa-book d-none d-sm-block'></i>
           <Link className="nav-link" to="/Categories">Categories</Link>
         </li>
         <li className="nav-item fs-5 d-flex align-items-center">
-          <i className='fa fa-globe'></i>
+          <i className='fa fa-globe d-none d-sm-block'></i>
           <Link className="nav-link" to="/Countries">Countries</Link>
         </li>
 

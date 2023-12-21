@@ -12,7 +12,7 @@ function Home() {
   return (
     <React.Fragment>
         <Carousel />
-        <div className="container mx-auto">
+        <div className="container mx-auto" id="intro-category">
             <div className="col-md-10 mx-auto text-center py-lg-2">
             <h1 className="text-center title py-2">Categories</h1>
             <div className="separator"></div>

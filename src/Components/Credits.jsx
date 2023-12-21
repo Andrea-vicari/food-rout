@@ -9,9 +9,11 @@ const Credits = () => {
       <div className="container-fluid bg-food">
         <div className="container">
           <main className="col-lg-12 text-center mx-auto py-5">
-              <h1 className="h3 mb-3 fw-normal">Favourite Recipes</h1>
-              <p className="fs-5">Here are the recipes you have added to the favorites section. You can review them calmly and try your hand at the preparation.</p>
-              <p className="fs-4">Bon Appetit!</p>
+              <h1 className="mb-3 fw-normal">Credits</h1>
+              <p className="fs-4">Recipes</p>
+              <p className="fs-4">Flags</p>
+              <p className="fs-4">Banner Images</p>
+              <p className="fs-4">Technology</p>
           </main>
         </div>
         </div>

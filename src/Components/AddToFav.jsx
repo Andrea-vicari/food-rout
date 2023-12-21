@@ -2,9 +2,9 @@ import React from "react";
 import {sinRecIngListEXP} from "./SingleRecCat";
 import {sinRecIngListEXPCountry} from "./SingleRecCountry";
 
-
+var recipeType;
 var recipeToAdd = [];
-
+var typeToAdd = [];
 console.log(recipeToAdd);
 
 const AddToFav = () => {
@@ -14,13 +14,15 @@ console.log(currentURL)
 
 let toBeClicked;
 
-currentURL == "/SingleRecCat" ? toBeClicked = sinRecIngListEXP : toBeClicked = sinRecIngListEXPCountry
 
+currentURL == "/SingleRecCat" ? toBeClicked = sinRecIngListEXP : toBeClicked = sinRecIngListEXPCountry;
+currentURL == "/SingleRecCat" ? recipeType = "/SingleRecCat?" : recipeType = "/SingleRecCountry?";
 console.log(toBeClicked)
 
 
 
 const insertFav = (toexp) =>{
+    toexp.type = recipeType;
     recipeToAdd.push(toexp);
     console.log(recipeToAdd);
     document.getElementById("staticBackdrop").classList.add('d-block');
