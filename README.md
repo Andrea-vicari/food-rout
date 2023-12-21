@@ -9,6 +9,7 @@
 
 ## Intro
 A Single Page Application built with React and API\
+A collection of more than 300 internation recipes, sorted in contries and categories.
 Project installed using Vite and Bootstrap, with the npm package `npm install react-bootstrap bootstrap.`\
 All the recipes are retrived via JSON using a FREE API of TheMealDB\
 Flags svg generated via FLAG ICONS: A curated collection of all country flags in SVG\
