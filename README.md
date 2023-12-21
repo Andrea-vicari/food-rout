@@ -1,6 +1,6 @@
 # WorldFood React App
 
-<img src="https://github.com/Andrea-vicari/food-rout/blob/master/src/Components/Common/Logo_Food_black.svg" width="200px">
+<img src="https://github.com/Andrea-vicari/food-rout/blob/master/WorldFood_GitHub_cover.jpg" width="500px">
 
 ## Technologies
 <img src="https://github.com/Andrea-vicari/Andrea-vicari/blob/main/Bootstrap_logo.png" style="width:45px"> <img src="https://github.com/Andrea-vicari/Andrea-vicari/blob/main/React_logo.png" style="width:45px">
@@ -9,7 +9,7 @@
 
 ## Intro
 A Single Page Application built with React and API\
-A collection of more than 300 internation recipes, sorted in contries and categories.
+A collection of more than 300 internation recipes, sorted in contries and categories.\
 Project installed using Vite and Bootstrap, with the npm package `npm install react-bootstrap bootstrap.`\
 All the recipes are retrived via JSON using a FREE API of TheMealDB\
 Flags svg generated via FLAG ICONS: A curated collection of all country flags in SVG\
