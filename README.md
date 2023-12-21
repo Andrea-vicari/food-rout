@@ -1,6 +1,6 @@
 # WorldFood React App
 
-<img src="https://github.com/Andrea-vicari/food-rout/blob/master/WorldFood_GitHub_cover.jpg" width="500px">
+<img src="https://github.com/Andrea-vicari/food-rout/blob/master/WorldFood_GitHub_cover_new.jpg" width="500px">
 
 ## Technologies
 <img src="https://github.com/Andrea-vicari/Andrea-vicari/blob/main/Bootstrap_logo.png" style="width:45px"> <img src="https://github.com/Andrea-vicari/Andrea-vicari/blob/main/React_logo.png" style="width:45px">
