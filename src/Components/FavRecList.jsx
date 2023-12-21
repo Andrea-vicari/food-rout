@@ -25,6 +25,7 @@ const FavRecList = () => {
                       <img src={e.strMealThumb} className="card-img-top" alt="..."/>
                       <div className="card-body">
                         <h5 className="card-title">{e.strMeal}</h5>
+
                         <Link to={`/SingleRecCat?${e.idMeal}`} state={{ clicked: e.idMeal }} className="icon-link gap-1 icon-link-hover">
                             Enjoy the recipe
 

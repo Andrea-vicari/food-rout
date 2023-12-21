@@ -16,10 +16,15 @@ function Footer() {
                     GitHub
                   </Link>
                 </li>
-              <li className="nav-item mx-2"><a href="#" className="nav-link px-2 text-white small">Home</a></li>
-              <li className="nav-item mx-2"><a href="#" className="nav-link px-2 text-warning small">Credits</a></li>
+              <li className="nav-item mx-2">
+                <Link to="/" className="nav-link px-2 text-white small">Home</Link>
+                </li>
+              <li className="nav-item mx-2">
+                <Link to="/Credits" className="nav-link px-2 text-warning small">Credits</Link>
+              </li>
             </ul>
-      <small className="col-md-4 mb-0 mt-3 text-white text-center">© 2023 World Food || <img src={logoReact} width='20'></img> project by A.Vicari</small>
+      <small className="col-md-4 mb-0 mt-3 text-white text-center">© 2023 World Food || <img src={logoReact} width='20'></img> project by
+      <Link className="text-decoration-none mx-1" to="https://cv-react-vite-phi.vercel.app/" target="_blank">A.V.</Link></small>
 
           </footer>
 

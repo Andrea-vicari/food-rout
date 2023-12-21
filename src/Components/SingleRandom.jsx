@@ -25,33 +25,27 @@ const SingleRandom = () => {
                 <div className="card-body">
                     <IngredientsListRandom />
                 </div>
-                <div className="bg-body-secondary py-3">
-                            <Link className="icon-link text-decoration-none fs-6 text-dark mx-2" to="/CategoriesPage">
-                                <i className="fa fa-globe fs-4 text-warning display-1"></i>
-                                {randomCloneExport.meals[0].strArea}
-                              </Link>
+                {/** */}
+                {/** */}
+                <div className="bg-body-secondary py-3 px-3">
+                            <div className="row">
+                                <div className="col-4">
+                                  <i className="fa fa-globe fs-4 text-warning display-1 px-1"></i>
+                                    <span className="px-1">{randomCloneExport.meals[0].strArea}</span>
+                                </div>
+                                <div className="col-4">
+                                  <i className="fa fa-lemon fs-4 text-warning display-1 px-1"></i>
+                                    <span className="px-1">{randomCloneExport.meals[0].strCategory}</span>
+                                </div>
+                                <div className="col-4">
+                                <Link className="icon-link text-decoration-none fs-6 text-dark" to={videoLink} target="_blank">
+                                  <i className="fab fa-youtube fs-4 text-danger display-1 px-1"></i>
+                                    Video
+                                </Link>
+                                  </div>
+                            </div>
 
-
-                            <Link className="icon-link text-decoration-none fs-6 text-dark mx-2" to="/CategoriesPage">
-                                <i className="fa fa-lemon fs-4 text-warning display-1"></i>
-                                {randomCloneExport.meals[0].strCategory}
-                              </Link>
-
-
-                            <Link className="icon-link text-decoration-none fs-6 text-dark mx-2" to={randomCloneExport.meals[0].strYoutube} target="_blank">
-                                <i className="fab fa-youtube fs-4 text-danger display-1"></i>
-                                Video
-                              </Link>
-              </div>
-                    <div className="card-header py-3">
-                        <div className="container">
-                          <p className="my-0 fs-5">Add to Favorites</p>
-                          <i className="fs-2 fa fa-heart text-danger"></i>
-
-                        </div>
-
-                    </div>
-
+                </div>
                 </div>
               </div>
 

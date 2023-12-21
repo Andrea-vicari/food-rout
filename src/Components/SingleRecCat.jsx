@@ -86,37 +86,34 @@ const SingleRecCat = (props) => {
                 <img src={thumbRe} className="d-block img-fluid" loading="lazy"/>
               </div>
               <div className="col-lg-6">
-                      <div className="card mb-4 rounded-3 shadow-sm">
-                      <div className="card-header py-1">
-                        <h3>Ingredients</h3>
-                      </div>
-                      <div className="card-body">
-                      <IngredientsListCat />
-                      </div>
-                      <div className="bg-body-secondary py-3">
-                                  <Link className="icon-link text-decoration-none fs-6 text-dark mx-2" to="/CategoriesPage">
-                                      <i className="fa fa-globe fs-4 text-warning display-1"></i>
-                                      {area}
+                 <div className="card mb-4 rounded-3 shadow-sm">
+                        <div className="card-header py-1">
+                          <h3>Ingredients</h3>
+                        </div>
+                          <div className="card-body">
+                          <IngredientsListCat />
+                          </div>
+                          <div className="bg-body-secondary py-3 px-3">
+                            <div className="row">
+                                <div className="col-4">
+                                  <i className="fa fa-globe fs-4 text-warning display-1 px-1"></i>
+                                    <span className="px-1">{area}</span>
+                                </div>
+                                <div className="col-4">
+                                  <i className="fa fa-lemon fs-4 text-warning display-1 px-1"></i>
+                                    <span className="px-1">{category}</span>
+                                </div>
+                                <div className="col-4">
+                                <Link className="icon-link text-decoration-none fs-6 text-dark" to={videoLink} target="_blank">
+                                  <i className="fab fa-youtube fs-4 text-danger display-1 px-1"></i>
+                                    Video
+                                </Link>
+                                  </div>
+                            </div>
 
-                                    </Link>
-
-
-                                  <Link className="icon-link text-decoration-none fs-6 text-dark mx-2" to="/CategoriesPage">
-                                      <i className="fa fa-lemon fs-4 text-warning display-1"></i>
-                                      {category}
-
-                                    </Link>
-
-
-                                  <Link className="icon-link text-decoration-none fs-6 text-dark mx-2" to={videoLink} target="_blank">
-                                      <i className="fab fa-youtube fs-4 text-danger display-1"></i>
-                                      Video
-                                    </Link>
-                      </div>
+                          </div>
                           <div className="card-header py-3">
                             <AddToFav />
-
-
                           </div>
                       </div>
               </div>

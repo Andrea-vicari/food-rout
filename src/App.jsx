@@ -6,9 +6,7 @@ import Footer from "./Components/Common/footer"
 import Home from "./Components/home"
 import CategoriesPage from './Components/CategoriesPage';
 import CountriesPage from './Components/CountriesPage';
-//import IngredientsPage from './Components/IngredientsPage';
-import LoginPage from './Components/LoginPage';
-//import {IngredientsPage} from './Components/IngredientsPage';
+import Credits from './Components/Credits';
 import FavRecList from "./Components/FavRecList";
 import ScrollToTop from './Components/ScrollToTop';
 import {SingleRandom} from './Components/SingleRandom';
@@ -28,13 +26,13 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Categories" element={<CategoriesPage />} />
         <Route path="/Countries" element={<CountriesPage />} />
-        <Route path="/Login" element={<LoginPage />} />
         <Route path="/SingleRandom" element={<SingleRandom />} />
         <Route path="/SingleCategory" element={<SingleCategory />} />
         <Route path="/SingleRecCat" element={<SingleRecCat />} />
         <Route path="/SingleCountry" element={<SingleCountry />} />
         <Route path="/SingleRecCountry" element={<SingleRecCountry />} />
         <Route path="/FavRecList" element={<FavRecList />} />
+        <Route path="/Credits" element={<Credits />} />
       </Routes>
       </ScrollToTop>
 
