@@ -1,11 +1,10 @@
 import React from "react";
-import { BreadCumb } from "./BreadCumb";
 import { useLocation} from "react-router-dom";
 import { useState, useEffect } from "react";
 import { arrayofID } from "./SingleCountry";
 import { Link } from "react-router-dom";
 import { IngredientsListCountry } from "./IngredientsListCountry";
-import { AddToFav } from "./AddToFav";
+import { AddToFav} from "./AddToFav";
 
 
 let currentURL = window.location.search;
@@ -76,9 +75,6 @@ const SingleRecCountry = (props) => {
     return (
 
     <React.Fragment>
-      <BreadCumb />
-
-
       <div className="container">
         <div className="main col-md-12">
         <h1 className="page-title">{titleRe}</h1>

@@ -1,5 +1,4 @@
 import React from "react";
-import { BreadCumb } from "./BreadCumb";
 import { useLocation} from "react-router-dom";
 import { useState, useEffect } from "react";
 import { arrayofID } from "./SingleCategory";
@@ -78,8 +77,6 @@ const SingleRecCat = (props) => {
     return (
 
     <React.Fragment>
-      <BreadCumb />
-
 
       <div className="container">
         <div className="main col-md-12">

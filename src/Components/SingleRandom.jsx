@@ -1,5 +1,4 @@
 import React from "react";
-import { BreadCumb } from "./BreadCumb";
 import { Link } from "react-router-dom";
 import { randomCloneExport } from "./Random";
 import { IngredientsListRandom } from "./IngredientsListRandom";
@@ -9,7 +8,7 @@ const SingleRandom = () => {
     return (
 
     <React.Fragment>
-      <BreadCumb />
+
 
       <div className="container">
         <div className="main col-md-12">

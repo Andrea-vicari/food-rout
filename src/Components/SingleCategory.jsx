@@ -1,5 +1,4 @@
 import React from "react";
-import { BreadCumb } from "./BreadCumb";
 import { catExpObj } from "./IntroCat";
 import { useState, useEffect} from "react";
 import { Link, useLocation} from "react-router-dom";
