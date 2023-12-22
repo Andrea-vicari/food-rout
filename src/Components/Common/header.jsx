@@ -28,7 +28,7 @@ function Header() {
         </li>
 
       </ul>
-      <Link to="/FavRecList" className="text-decoration-none" data-bs-toggle="collapse">
+      <Link to="/FavRecList" className="text-decoration-none">
       <i className="px-2 text-black fa fa-heart fs-5"></i>
       </Link>
     </div>
