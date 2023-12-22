@@ -29,3 +29,6 @@
   background-size: cover;
 }
 
+@media (max-width: 37.5em) {
+#logo_header{width: 70px;}
+}

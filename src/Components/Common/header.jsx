@@ -12,7 +12,7 @@ function Header() {
     <nav className="navbar navbar-expand-lg bg-warning">
   <div className="container">
     <Link className="navbar-brand" to="/">
-    <img src={logo} width='120'></img>
+    <img src={logo} width='120' id="logo_header"></img>
     </Link>
     <button className="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="true" aria-label="Toggle navigation">
         <i className='fa fa-bars fs-3 text-black'></i>
