@@ -16,19 +16,15 @@ function Header() {
       <ul className="navbar-nav col-lg-10  d-flex justify-content-around align-content-end">
         <li className="nav-item fs-5 d-flex align-items-center">
           <i className='fa fa-home d-none d-sm-block'></i>
-<<<<<<< HEAD
-            <Link className="nav-link" to="/" >Home</Link>
-=======
-            <Link className="nav-link" to="/" data-bs-toggle="collapse">Home</Link>
->>>>>>> cdf365de0e3f2c56483bf8257d4182289d7bf150
+            <Link className="nav-link" to="/">Home</Link>
         </li>
         <li className="nav-item fs-5 d-flex align-items-center">
           <i className='fa fa-book d-none d-sm-block'></i>
-          <Link className="nav-link" to="/Categories" data-bs-toggle="collapse">Categories</Link>
+          <Link className="nav-link" to="/Categories">Categories</Link>
         </li>
         <li className="nav-item fs-5 d-flex align-items-center">
           <i className='fa fa-globe d-none d-sm-block'></i>
-          <Link className="nav-link" to="/Countries" data-bs-toggle="collapse">Countries</Link>
+          <Link className="nav-link" to="/Countries">Countries</Link>
         </li>
 
       </ul>
