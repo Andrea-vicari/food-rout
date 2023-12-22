@@ -3,6 +3,11 @@ import { Link } from "react-router-dom";
 import logo from "../Common/Logo_Food_black.svg"
 
 function Header() {
+
+  const menuCloser = () =>{
+    document.getElementById("navbarCollapse").classList.remove("show");
+  }
+
   return (
     <nav className="navbar navbar-expand-lg bg-warning">
   <div className="container">
@@ -16,19 +21,19 @@ function Header() {
       <ul className="navbar-nav col-lg-10  d-flex justify-content-around align-content-end">
         <li className="nav-item fs-5 d-flex align-items-center">
           <i className='fa fa-home d-none d-sm-block'></i>
-            <Link className="nav-link" to="/">Home</Link>
+            <Link className="nav-link" to="/"  onClick={()=>menuCloser()}>Home</Link>
         </li>
         <li className="nav-item fs-5 d-flex align-items-center">
           <i className='fa fa-book d-none d-sm-block'></i>
-          <Link className="nav-link" to="/Categories">Categories</Link>
+          <Link className="nav-link" to="/Categories" onClick={()=>menuCloser()}>Categories</Link>
         </li>
         <li className="nav-item fs-5 d-flex align-items-center">
           <i className='fa fa-globe d-none d-sm-block'></i>
-          <Link className="nav-link" to="/Countries">Countries</Link>
+          <Link className="nav-link" to="/Countries" onClick={()=>menuCloser()}>Countries</Link>
         </li>
 
       </ul>
-      <Link to="/FavRecList" className="text-decoration-none">
+      <Link to="/FavRecList" className="text-decoration-none" onClick={()=>menuCloser()}>
       <i className="px-2 text-black fa fa-heart fs-5"></i>
       </Link>
     </div>
