@@ -28,15 +28,15 @@ const SingleRandom = () => {
 
                 <div className="bg-body-secondary py-3 px-3">
                             <div className="row">
-                                <div className="col-4">
+                                <div className="col-sm-4 mb-2">
                                   <i className="fa fa-globe fs-4 text-warning display-1 px-1"></i>
                                     <span className="px-1">{randomCloneExport.meals[0].strArea}</span>
                                 </div>
-                                <div className="col-4">
+                                <div className="col-sm-4 mb-2">
                                   <i className="fa fa-lemon fs-4 text-warning display-1 px-1"></i>
                                     <span className="px-1">{randomCloneExport.meals[0].strCategory}</span>
                                 </div>
-                                <div className="col-4">
+                                <div className="col-sm-4 mb-2">
                                 <Link className="icon-link text-decoration-none fs-6 text-dark" to={randomCloneExport.meals[0].strYoutube} target="_blank">
                                   <i className="fab fa-youtube fs-4 text-danger display-1 px-1"></i>
                                     Video

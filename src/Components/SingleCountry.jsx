@@ -57,7 +57,7 @@ return (
       <div className="col-lg-6 col-md-8 mx-auto">
         <h1 className="fw-light">{cloneFiltered[0].strArea}</h1>
         <div className="separator"></div>
-        <p className="lead text-body-secondary">{cloneFiltered[0].description}</p>
+        <p className="lead text-body-secondary d-none d-sm-block">{cloneFiltered[0].description}</p>
       </div>
     </div>
   </section>

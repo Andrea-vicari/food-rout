@@ -52,7 +52,7 @@ return (
     <div className="row py-lg-5">
       <div className="col-lg-6 col-md-8 mx-auto">
         <h1 className="fw-light">{cloneFiltered[0].strCategory}</h1>
-        <p className="lead text-body-secondary">{cloneFiltered[0].strCategoryDescription}</p>
+        <p className="lead text-body-secondary d-none d-sm-block">{cloneFiltered[0].strCategoryDescription}</p>
       </div>
     </div>
   </section>
