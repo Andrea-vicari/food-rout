@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 var CAT_URL = 'https://www.themealdb.com/api/json/v1/1/categories.php';
 
-var catExpObj;
+
 const IntroCat = () => {
 
 
@@ -23,7 +23,6 @@ const IntroCat = () => {
 
 
 
-  catExpObj = [...data]
 
   for(let i=0;i<data.length;i++){
 
@@ -61,4 +60,4 @@ const IntroCat = () => {
       ))
     )
 }
-export {IntroCat, catExpObj};
+export {IntroCat};

@@ -1,24 +1,24 @@
 import React from "react";
-import { catExpObj } from "./IntroCat";
+
 import { useState, useEffect} from "react";
 import { Link, useLocation} from "react-router-dom";
 
 
 var SingleCatLoopExp;
 var whatClickedFromHome
-var cloneFiltered;
+// var cloneFiltered;
 
 var arrayofID = [];
 var idAPI = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=";
 
 const SingleCategory = () => {
 
-  console.log(catExpObj)
 
   let { state } = useLocation();
   whatClickedFromHome = state.clicked; // example "Chicken"
 
-  cloneFiltered = catExpObj.filter((element)=> element.strCategory == whatClickedFromHome);
+  console.log(whatClickedFromHome)
+
 
   var SINGLE_CAT_URL = 'https://www.themealdb.com/api/json/v1/1/filter.php?c='.concat(whatClickedFromHome);
 
@@ -51,8 +51,8 @@ return (
   <section className="py-5 text-center container-fluid bg-food">
     <div className="row py-lg-5">
       <div className="col-lg-6 col-md-8 mx-auto">
-        <h1 className="fw-light">{cloneFiltered[0].strCategory}</h1>
-        <p className="lead text-body-secondary d-none d-sm-block">{cloneFiltered[0].strCategoryDescription}</p>
+        <h1 className="fw-light">{whatClickedFromHome}</h1>
+
       </div>
     </div>
   </section>
