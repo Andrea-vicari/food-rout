@@ -35,7 +35,7 @@ function App() {
         <Route path="/SingleRecCountry" element={<SingleRecCountry />} />
         <Route path="/FavRecList" element={<FavRecList />} />
         <Route path="/Credits" element={<Credits />} />
-        <Route path='*' element={<NotFound />}/>
+        <Route path="*" element={<NotFound />}/>
       </Routes>
       </ScrollToTop>
 
