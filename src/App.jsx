@@ -9,7 +9,6 @@ import CountriesPage from './Components/CountriesPage';
 import Credits from './Components/Credits';
 import FavRecList from "./Components/FavRecList";
 import ScrollToTop from './Components/ScrollToTop';
-import NotFound from './Components/NotFound';
 import {SingleRandom} from './Components/SingleRandom';
 import {SingleRecCat} from './Components/SingleRecCat';
 import {SingleCategory} from './Components/SingleCategory';
@@ -35,7 +34,7 @@ function App() {
         <Route path="/SingleRecCountry" element={<SingleRecCountry />} />
         <Route path="/FavRecList" element={<FavRecList />} />
         <Route path="/Credits" element={<Credits />} />
-        <Route path="*" element={<NotFound />}/>
+
       </Routes>
       </ScrollToTop>
 

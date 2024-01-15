@@ -6,7 +6,7 @@ import { Link, useLocation} from "react-router-dom";
 
 var SingleCountryLoopExp;
 var whatClickedFromHome
-var cloneFiltered;
+// var cloneFiltered;
 
 var arrayofID = [];
 var idAPI = "https://www.themealdb.com/api/json/v1/1/lookup.php?i=";
@@ -20,8 +20,8 @@ const SingleCountry = () => {
 
   console.log(whatClickedFromHome)
 
-  cloneFiltered = cloneCountry.filter((element)=> element.strArea == whatClickedFromHome);
-  console.log(cloneFiltered);
+  //cloneFiltered = cloneCountry.filter((element)=> element.strArea == whatClickedFromHome);
+  //console.log(cloneFiltered);
 
 
   var SINGLE_COUNTRY_URL = 'https://www.themealdb.com/api/json/v1/1/filter.php?a='.concat(whatClickedFromHome);
@@ -55,9 +55,9 @@ return (
   <section className="py-5 text-center container-fluid bg-food">
     <div className="row py-lg-5">
       <div className="col-lg-6 col-md-8 mx-auto">
-        <h1 className="fw-light">{cloneFiltered[0].strArea}</h1>
+        <h1 className="fw-light">{whatClickedFromHome}</h1>
         <div className="separator"></div>
-        <p className="lead text-body-secondary d-none d-sm-block">{cloneFiltered[0].description}</p>
+
       </div>
     </div>
   </section>
@@ -76,7 +76,7 @@ return (
 
                 <Link type="button" to={`/SingleRecCountry?${e.idMeal}`} state={{ clicked: e.idMeal }} className="btn btn-sm btn-outline-secondary">Enjoy the recipe</Link>
 
-              <i className={cloneFiltered[0].flag}></i>
+
             </div>
           </div>
         </div>
