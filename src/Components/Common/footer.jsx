@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../Common/Logo_Food_yellow.svg"
 import logoReact from "../Common/react.svg"
 import { Link } from "react-router-dom";
-import CookieConsent, { Cookies } from "react-cookie-consent";
+
 
 function Footer() {
   return(
@@ -27,16 +27,7 @@ function Footer() {
             </ul>
       <small className="col-md-4 mb-0 mt-3 text-white text-center">© 2023 World Food || <img src={logoReact} width='20'></img> project by
       <Link className="text-decoration-none mx-1" to="https://cv-react-vite-phi.vercel.app/" target="_blank">A.V.</Link></small>
-      <CookieConsent
-        location="bottom"
-        buttonText="Ok, Accept"
-        cookieName="myAwesomeCookieName2"
-        style={{ background: "#2B373B" }}
-        buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
-        expires={150}
-        >
-        This website uses cookies to enhance the user experience. Only functional cookies are used, no adv cookies or any user data will be collected.
-        </CookieConsent>
+
           </footer>
 
     </div>

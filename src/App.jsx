@@ -14,6 +14,7 @@ import {SingleRecCat} from './Components/SingleRecCat';
 import {SingleCategory} from './Components/SingleCategory';
 import {SingleCountry} from './Components/SingleCountry';
 import {SingleRecCountry} from './Components/SingleRecCountry';
+import CookieConsent, { Cookies } from "react-cookie-consent";
 
 
 function App() {
@@ -39,6 +40,16 @@ function App() {
       </ScrollToTop>
 
      <Footer />
+     <CookieConsent
+        location="bottom"
+        buttonText="Ok, Accept"
+        cookieName="myAwesomeCookieName2"
+        style={{ background: "#2B373B" }}
+        buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
+        expires={150}
+        >
+        This website uses cookies to enhance the user experience. Only functional cookies are used, no adv cookies or any user data will be collected.
+        </CookieConsent>
      </React.Fragment>
   )
 }
